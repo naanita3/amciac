@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="format-detection" content="direction=no">
+    <title>AMCI</title>
+    <link rel="shortcut icon" href="assets/img/logo/favicon.png">
+    <!--ICONS-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- Fuente Poppins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <!-- Animate on Scroll CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- Swiper para carruseles -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <div id="page-loader">
+        <div class="loader-content">
+            <img src="assets/img/logo/logoamci.png" alt="AMCI">
+            <span>Cargando...</span>
+        </div>
+    </div>
+
+    <div id="cookie-banner">
+        <p>
+            Utilizamos cookies para mejorar tu experiencia.
+            <a href="#">Ver política</a>
+        </p>
+        <button id="accept-cookies">Aceptar</button>
+    </div>
+
+    <header>
+        <div class="logo">
+            <img src="assets/img/logo/logoamci.png" alt="AMCI">
+        </div>
+
+        <div class="menu-toggle" id="menuToggle">☰</div>
+
+        <nav id="mainNav" class="indexnav">
+            <div class="close-menu" id="closeMenu">×</div>
+
+            <ul>
+                <li><a href="#inicio">INICIO</a></li>
+
+                <li class="dropdown-item">
+                    <a href="#">AMCI</a>
+                    <div class="dropdown-menu">
+                        <a href="nosotros.html">Sobre Nosotros</a>
+                        <a href="#mision">Mesa Directiva</a>
+                        <a href="#directorio">Eventos</a>
+                        <a href="#directorio">AMCISTORE</a>
+                    </div>
+                </li>
+
+                <li class="dropdown-item">
+                    <a href="#">MIEMBROS</a>
+                    <div class="dropdown-menu">
+                        <a href="#beneficios">
+                            <p>Padrón de Proveedores</p>
+                        </a>
+                        <a href="#afiliacion">Socios</a>
+                        <a href="#directorio-miembros">Afiliación</a>
+                    </div>
+                </li>
+
+                <li class="dropdown-item">
+                    <a href="#">CONVENIOS</a>
+                    <div class="dropdown-menu">
+                        <a href="#proveedores">Beneficios</a>
+                        <a href="#descuentos">Convenios</a>
+                    </div>
+                </li>
+
+                <li class="dropdown-item">
+                    <a href="#">CAPACITACIONES</a>
+                    <div class="dropdown-menu">
+                        <a href="#cursos">Cursos</a>
+                        <a href="#certificaciones">Certificaciones</a>
+                        <a href="#eventos">Eventos</a>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+
+    <!-- Sección Hero con Video de Fondo -->
+    <section class="hero" id="inicio">
+        <div class="video-background">
+            <video autoplay muted loop playsinline preload="none">
+                <source src="assets/videos/Index2.mp4" type="video/mp4">
+                Tu navegador no soporta videos HTML5.
+            </video>
+            <div class="video-overlay"></div>
+        </div>
+        <div class="hero-content" data-aos="fade-up" data-aos-duration="1000">
+            <p class="hero-subtitle" style="margin: 0;">ESTO ES</p>
+            <div class="animated-title">
+                <div class="word-container">
+                    <h1 class="word">AMCI</h1>
+                    <h1 class="word">COLABORACIÓN</h1>
+                    <h1 class="word">COMPROMISO</h1>
+                    <h1 class="word">INDUSTRIA</h1>
+                </div>
+            </div>
+            <p>Somos una Asociación Mexicana comprometida en promover la formalización de la <b>industria concretera
+                    independiente</b>.</p>
+            <a href="#afiliate" class="btn">SOBRE NOSOTROS</a>
+        </div>
+        <div class="hero-socials">
+            <a href="https://www.facebook.com/mexicoenconcreto" target="_blank" aria-label="Facebook">
+                <i class="fa-brands fa-facebook-f"></i>
+            </a>
+            <a href="https://www.instagram.com/amci.ac/" target="_blank" aria-label="Instagram">
+                <i class="fa-brands fa-instagram"></i>
+            </a>
+            <a href="https://www.linkedin.com/company/asociaci%C3%B3n-mexicana-de-concreteros-independientes/"
+                target="_blank" aria-label="LinkedIn">
+                <i class="fa-brands fa-linkedin-in"></i>
+            </a>
+            <a href="https://wa.me/5218118044452" target="_blank" aria-label="WhatsApp">
+                <i class="fa-brands fa-whatsapp"></i>
+            </a>
+        </div>
+    </section>
+
+    <!-- Sección Aliados (Carrusel automático) -->
+    <section class="aliados-section" id="miembros">
+        <div class="section-title" data-aos="fade-up">
+            <h2>NUESTROS ALIADOS</h2>
+        </div>
+
+        <div class="aliados-slider swiper" data-aos="fade-up" data-aos-delay="200">
+            <div class="swiper-wrapper">
+                <!-- Logos de aliados - se repetirán 10 para el carrusel -->
+                <div class="swiper-slide">
+                    <img src="assets/img/logo/proveedores/Arkiklogo.jpg" alt="Aliado 1">
+                </div>
+                <div class="swiper-slide">
+                    <img src="assets/img/logo/proveedores/cemex.jpg" alt="Aliado 2">
+                </div>
+                <div class="swiper-slide">
+                    <img src="assets/img/logo/proveedores/command_Alkon.jpg" alt="Aliado 3">
+                </div>
+                <div class="swiper-slide">
+                    <img src="assets/img/logo/proveedores/carboncure.jpg" alt="Aliado 4">
+                </div>
+                <div class="swiper-slide">
+                    <img src="assets/img/logo/proveedores/braher.jpg" alt="Aliado 5">
+                </div>
+                <div class="swiper-slide">
+                    <img src="assets/img/logo/proveedores/scania.jpg" alt="Aliado 6">
+                </div>
+                <div class="swiper-slide">
+                    <img src="assets/img/logo/proveedores/shacman.jpg" alt="Aliado 7">
+                </div>
+                <div class="swiper-slide">
+                    <img src="assets/img/logo/proveedores/sitsa.webp" alt="Aliado 8">
+                </div>
+            </div>
+        </div>
+
+        <!-- TEXTO AMCI HOY (DELANTE) -->
+        <div class="overlay-content">
+            <h1 class="titulo" data-aos="fade-right">AMCI HOY</h1>
+
+            <ul class="beneficios">
+                <li data-aos="fade-up" data-aos-delay="100">
+                    <b>Enfoque</b> en desarrollo profesional, innovación y sustentabilidad
+                </li>
+                <li data-aos="fade-up" data-aos-delay="200">
+                    <b>Proveedores activos </b> que respaldan a la industria
+                </li>
+                <li data-aos="fade-up" data-aos-delay="300">
+                    Vinculación directa entre <b>concreteros</b>, <b>proveedores</b> y <b>especialistas</b>
+                </li>
+            </ul>
+        </div>
+
+        <!-- INGENIEROS -->
+        <div class="amcihoy" data-aos="fade-up-left" data-aos-delay="100">
+            <img src="assets/img/complementos/inges.png" class="inges" alt="">
+        </div>
+    </section>
+
+    <!------------------ SEcción Sobre AMCI ---------------->
+    <section class="about-amci" id="sobre-amci">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text" data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine">
+                    <h3>¿Quiénes somos?</h3>
+                    <p>
+                        Somos una <b>Asociación Mexicana de Concreteros Independientes</b> (AMCI) que reúne a empresas
+                        del sector del concreto con el objetivo de fortalecer la colaboración, promover
+                        buenas prácticas y generar oportunidades de desarrollo a nivel regional
+                        y nacional.
+                    </p>
+
+                    <p>
+                        A través de eventos, alianzas y programas especializados, AMCI se
+                        consolida como un punto de encuentro para líderes del sector.
+                    </p>
+                </div>
+
+                <div class="about-gallery">
+                    <img src="assets/img/nosotros/1.jpg" alt="Evento AMCI" data-aos="zoom-out" data-aos-delay="100">
+                    <img src="assets/img/nosotros/2.jpg" alt="Desayuno AMCI" data-aos="zoom-out" data-aos-delay="200">
+                    <img src="assets/img/nosotros/3.jpg" alt="Networking AMCI" data-aos="zoom-out" data-aos-delay="300">
+                    <img src="assets/img/nosotros/4.jpg" alt="Reunión AMCI" data-aos="zoom-out" data-aos-delay="400">
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- Sección REVISTAS -->
+    <section class="revistas-section" id="revistas-sec">
+        <div class="section-title" data-aos="fade-up">
+            <p>NUESTRA PUBLICACIÓN</p>
+            <h2><span>REVISTA </span><b>MÉXICO EN CONCRETO</b></h2>
+        </div>
+
+        <div class="carrusel-adaptable swiper" data-aos="fade-up" data-aos-delay="200">
+            <div class="swiper-wrapper">
+                <!-- Solo mostramos 6 por simplicidad, pero se pueden agregar más -->
+                <div class="swiper-slide revista-slide">
+                    <img src="assets/img/portadas/115.webp" alt="Revista Edición 115">
+                    <div class="revista-overlay">
+                        <a href="https://www.amciac.org/PDF/REVISTA115.pdf"><p>Revista<br><span>Edición No. 115</span></p></a>
+                    </div>
+                </div>
+
+                <div class="swiper-slide revista-slide">
+                    <img src="assets/img/portadas/114.webp" alt="Revista Edición 114">
+                    <div class="revista-overlay">
+                        <a href="https://www.amciac.org/PDF/REVISTA_114.pdf"><p>Revista<br><span>Edición No. 114</span></p></a>
+                    </div>
+                </div>
+
+                <div class="swiper-slide revista-slide">
+                    <img src="assets/img/portadas/113.webp" alt="Revista Edición 113">
+                    <div class="revista-overlay">
+                         <a href="https://www.amciac.org/PDF/REVISTA113.pdf"><p>Revista<br><span>Edición No. 113</span></p></a>
+                    </div>
+                </div>
+
+                <div class="swiper-slide revista-slide">
+                    <img src="assets/img/portadas/112.webp" alt="Revista Edición 112">
+                    <div class="revista-overlay">
+                        <a href="https://heyzine.com/flip-book/2f0e94b183.html"><p>Revista<br><span>Edición No. 112</span></p></a>
+                    </div>
+                </div>
+
+                <div class="swiper-slide revista-slide">
+                    <img src="assets/img/portadas/111.webp" alt="Revista Edición 111">
+                    <div class="revista-overlay">
+                        <a href="https://heyzine.com/flip-book/b54e288cc9.html"><p>Revista<br><span>Edición No. 111</span></p></a>
+                    </div>
+                </div>
+
+                <div class="swiper-slide revista-slide">
+                    <img src="assets/img/portadas/110.webp" alt="Revista Edición 110">
+                    <div class="revista-overlay">
+                        <a href="https://heyzine.com/flip-book/00fdff6167.html"><p>Revista<br><span>Edición No. 110</span></p></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="text-center" data-aos="fade-up" data-aos-delay="400" style="padding-top: 5%;">
+            <a href="https://drive.google.com/drive/folders/1ROTpWwyp6YIkbWjBmsAwRo3gOWwRT1ST" class="btn">Ver más ediciones</a>
+        </div>
+    </section>
+
+    <!-- Sección BENEFICIOS -->
+    <section class="beneficios-section">
+        <h2 class="beneficios-section-title" data-aos="fade-right"> Nuestros Beneficios</h2>
+
+        <div class="beneficios-section-grid">
+            <!-- Card -->
+            <div class="beneficio-card white" data-aos="flip-left" data-aos-delay="100">
+                <div class="icon"><i class="fa-solid fa-landmark"></i></div>
+                <h3>Representación <br>sectorial</h3>
+                <ul>
+                    <li><b>Defendemos</b> los intereses de la industria ante reguladores y entidades clave,
+                        <b>impulsando</b> un entorno favorable para <b>tu empresa</b>.
+                    </li>
+
+                </ul>
+            </div>
+
+            <div class="beneficio-card blue" data-aos="flip-left" data-aos-delay="200">
+                <div class="icon"><i class="fa-solid fa-graduation-cap"></i></div>
+                <h3>Capacitación <br>preferencial</h3>
+                <ul>
+                    <li><b>Accede</b> a cursos, talleres y certificaciones a precios preferenciales, con oportunidades
+                        de <b>crecimiento profesional</b> y <b>técnico.</b></li>
+                </ul>
+            </div>
+
+            <div class="beneficio-card white" data-aos="flip-left" data-aos-delay="300">
+                <div class="icon"><i class="fa-solid fa-handshake"></i>
+                </div>
+                <h3>Eventos <br>exclusivos</h3>
+                <ul>
+                    <li><b>Participa</b> en congresos, exposiciones y juntas regionales con expertos del sector,
+                        <b>potenciando</b> tu red de contactos y <b>oportunidades</b> de negocio.
+                    </li>
+                </ul>
+            </div>
+
+            <div class="beneficio-card blue" data-aos="flip-left" data-aos-delay="400">
+                <div class="icon"><i class="fa-solid fa-tags"></i>
+                </div>
+                <h3>Beneficios <br>comerciales</h3>
+                <ul>
+                    <li><b>Disfruta</b> de <b>descuentos</b> en insumos, refacciones, servicios, viajes y más, además de
+                        <b>acceso</b> a plataformas de empleo y compraventa especializadas.
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="text-center" data-aos="fade-up" data-aos-delay="400" style="margin-top: 5%;">
+            <a href="#ver-mas" class="btn" style="background-color: #2e2e2e;">Conócelos todos aquí</a>
+        </div>
+    </section>
+
+    <!-- Sección Estadísticas -->
+    <section class="stats-section">
+        <div class="stats-grid">
+            <div class="stat-card" data-aos="fade-up" data-aos-delay="100">
+                <i class="fas fa-calendar-alt"></i>
+                <div class="stat-number" data-count="22">0</div>
+                <div class="stat-text">Años activos</div>
+            </div>
+
+            <div class="stat-card" data-aos="fade-up" data-aos-delay="200">
+                <i class="fas fa-building"></i>
+                <div class="stat-number" data-count="150">0</div>
+                <div class="stat-text">Empresas afiliadas</div>
+            </div>
+
+            <div class="stat-card" data-aos="fade-up" data-aos-delay="300">
+                <i class="fas fa-chalkboard-teacher"></i>
+                <div class="stat-number" data-count="45">0</div>
+                <div class="stat-text">Capacitaciones anuales</div>
+            </div>
+
+            <div class="stat-card" data-aos="fade-up" data-aos-delay="400">
+                <i class="fas fa-people-arrows"></i>
+                <div class="stat-number" data-count="12">0</div>
+                <div class="stat-text">Convenios activos</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Banner Afíliate -->
+    <section class="afiliate-banner" id="afiliate">
+        <h2 data-aos="zoom-in">¡Afíliate en línea y obtén <span>10% de descuento</span>!</h2>
+        <p data-aos="zoom-in">Registra tu concretera a través de nuestra página web y accede a todos los beneficios
+            <b>AMCI</b> con un
+            descuento
+            exclusivo.
+        </p>
+        <a href="https://ejemplo.com/afiliate" target="_blank" class="btn btn-afiliate" data-aos="zoom-in">QUIERO LOS
+            BENEFICIOS</a>
+    </section>
+
+
+    <!-- BANNERS -->
+    <section class="banners-section">
+
+        <div class="swiper carrusel-banners-proveedores">
+            <div class="swiper-wrapper">
+
+                <div class="swiper-slide banner-slide">
+                    <img src="assets/img/banners/banner-svf.jpg" alt="SVF">
+                </div>
+
+                <div class="swiper-slide banner-slide">
+                    <img src="assets/img/banners/BRAHER MIXERS-AMCI.jpg" alt="Braher">
+                </div>
+
+                <div class="swiper-slide banner-slide">
+                    <img src="assets/img/banners/bannerswiching.jpg" alt="Schwing">
+                </div>
+
+            </div>
+
+            <!-- Flechas -->
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+        </div>
+
+    </section>
+
+
+    <!-- Formulario -->
+    <section class="formulario-section">
+        <h2 data-aos="zoom-in-up">¿Te gustaría <span>saber más</span>?</h2>
+        <div class="form-container" data-aos="fade-up" data-aos-delay="100">
+            <form id="contactForm">
+
+                <div class="form-group">
+                    <label for="name">Nombre completo</label>
+                    <input type="text" id="name" name="name" required placeholder="Tu nombre completo">
+                </div>
+
+                <div class="form-group">
+                    <label for="company">Empresa</label>
+                    <input type="text" id="company" name="company" required placeholder="Nombre de la empresa">
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Correo electrónico de contacto</label>
+                    <input type="email" id="email" name="email" required placeholder="ejemplo@email.com">
+                </div>
+
+                <div class="form-group">
+                    <label>¿Qué aspecto te interesa?</label>
+                    <div class="checkbox-group">
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="socio-constructor" name="interest" value="socio_concretero">
+                            <label for="socio-constructor">Volverme socio concretero</label>
+                        </div>
+
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="socio-proveedor" name="interest" value="socio_proveedor">
+                            <label for="socio-proveedor">Volverme socio proveedor</label>
+                        </div>
+
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="eventos" name="interest" value="eventos">
+                            <label for="eventos">Eventos AMCI</label>
+                        </div>
+
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="otro" name="interest" value="otro">
+                            <label for="otro">Otro</label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="message">Si seleccionaste “Otro”, cuéntanos brevemente</label>
+                    <textarea id="message" name="message" rows="3"
+                        placeholder="Escribe aquí tu mensaje (opcional)"></textarea>
+                </div>
+
+                <p class="form-nota">Tu información personal no se compartirá. Nunca envíes contraseñas.</p>
+
+                <button type="submit" class="btn btn-submit">Enviar</button>
+            </form>
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+
+            <!-- Columna 1 -->
+            <div class="footer-column footer-brand">
+                <img src="assets/img/logo/logoamci.png" alt="AMCI" class="footer-logo">
+
+                <p>
+                    Somos una Asociación Mexicana comprometida en promover la formalización de la industria concretera
+                    independiente
+                </p>
+
+                <div class="footer-social">
+                    <a href="https://www.facebook.com/mexicoenconcreto"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="https://www.instagram.com/amci.ac/"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://www.linkedin.com/company/asociaci%C3%B3n-mexicana-de-concreteros-independientes/"><i
+                            class="fa-brands fa-linkedin-in"></i></a>
+                    <a href="https://wa.me/5218118044452"><i class="fa-brands fa-whatsapp"></i></a>
+                </div>
+            </div>
+
+            <!-- Columna 2 -->
+            <div class="footer-column">
+                <h3>Navegación</h3>
+                <ul class="footer-links">
+                    <li><i class="fa-solid fa-angle-right"></i><a href="index.html">Inicio</a></li>
+                    <li><i class="fa-solid fa-angle-right"></i><a href="nosotros.html">AMCI</a></li>
+                    <li><i class="fa-solid fa-angle-right"></i><a href="#miembros">Miembros</a></li>
+                    <li><i class="fa-solid fa-angle-right"></i><a href="#convenios">Convenios</a></li>
+                    <li><i class="fa-solid fa-angle-right"></i><a href="#capacitaciones">Capacitación</a></li>
+                    <li><i class="fa-solid fa-angle-right"></i><a href="#blog">Blog</a></li>
+                    <li><i class="fa-solid fa-angle-right"></i><a href="#contacto">Contacto</a></li>
+                </ul>
+            </div>
+
+            <!-- Columna 3 -->
+            <div class="footer-column">
+                <h3>Contacto</h3>
+
+                <div class="footer-contact">
+
+                    <ul>
+                        <li><i class="fa-solid fa-location-dot"></i>
+                            <p><a href="https://maps.app.goo.gl/HgTsrKyP8JxzeWnP8">David Alfaro Siqueiros 106 – Suite
+                                    1700 P.17
+                                    Valle Oriente, 66269 San Pedro Garza García, N.L.</a>
+                            </p>
+                        </li>
+                        <li><i class="fa-solid fa-phone"></i>
+                            <p>Oficina: 81 4739 5426<br>
+                                Socios y proveedores: 81 1804 4452<br>
+                                Rel. gubernamentales y eventos: 81 1804 1943</p>
+                        </li>
+                        <li><i class="fa-solid fa-clock"></i>
+                            <p>Lun – Vie: 08:00 AM – 5:00 PM</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+            <p>© 2026 AMCI. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+    <script>
+        (function () {
+            emailjs.init("cUOH_KV2ZMrGf7_YT");
+        })();
+    </script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
