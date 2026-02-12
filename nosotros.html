@@ -26,7 +26,7 @@
     <!-- Nuestro CSS Modular -->
     <link rel="stylesheet" href="styles.css">
     <!-- Estilos específicos para Quiénes Somos -->
-    <link rel="stylesheet" href="nosotros.css">
+    <link rel="stylesheet" href="assets/css/nosotros.css">
 </head>
 
 <body>
@@ -68,7 +68,7 @@
                     <a href="#">AMCI</a>
                     <div class="dropdown-menu">
                         <a href="nosotros.html">Sobre Nosotros</a>
-                        <a href="#mision">Mesa Directiva</a>
+                        <a href="mesa-directiva.html">Mesa Directiva</a>
                         <a href="#directorio">Eventos</a>
                         <a href="#directorio">AMCISTORE</a>
                     </div>
@@ -418,7 +418,7 @@
             </div>
 
             <div class="directorio-boton" data-aos="fade-up" data-aos-delay="200">
-                <a href="directorio-completo.html" class="btn">VER COMPLETO</a>
+                <a href="mesa-directiva.html" class="btn">VER COMPLETO</a>
             </div>
         </div>
     </section>
@@ -515,99 +515,49 @@
     </footer>
 
     <!-- ===== SCRIPTS ===== -->
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
     <script>
-        (function () {
-            emailjs.init("cUOH_KV2ZMrGf7_YT");
-        })();
+    (function() {
+        emailjs.init("cUOH_KV2ZMrGf7_YT");
+    })();
     </script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="script.js"></script>
     <script>
-        // Inicializar AOS
-        AOS.init({
-            duration: 1000,
-            once: true,
-            offset: 100,
-        });
-
-        // Carrusel de Directivos
-        const directivosSwiper = new Swiper('.directorio-carrusel', {
-            slidesPerView: 1,
-            spaceBetween: 30,
-            loop: true,
-            autoplay: {
-                delay: 3000,
-                disableOnInteraction: false,
+    // Swiper específico para esta página
+    const directivosSwiper = new Swiper('.directorio-carrusel', {
+        slidesPerView: 1,
+        spaceBetween: 30,
+        loop: true,
+        autoplay: {
+            delay: 3000,
+            disableOnInteraction: false,
+        },
+        speed: 800,
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+        },
+        breakpoints: {
+            640: {
+                slidesPerView: 2,
             },
-            speed: 800,
-            navigation: {
-                nextEl: '.swiper-button-next',
-                prevEl: '.swiper-button-prev',
+            992: {
+                slidesPerView: 3,
             },
-            pagination: {
-                el: '.swiper-pagination',
-                clickable: true,
+            1200: {
+                slidesPerView: 4,
             },
-            breakpoints: {
-                640: {
-                    slidesPerView: 2,
-                },
-                992: {
-                    slidesPerView: 3,
-                },
-                1200: {
-                    slidesPerView: 4,
-                },
-            },
-        });
-
-        // Animación de números (estadísticas)
-        function animateNumbers() {
-            const numberElements = document.querySelectorAll('[data-count]');
-
-            numberElements.forEach(element => {
-                const target = parseInt(element.getAttribute('data-count'));
-                const duration = 2000;
-                const increment = target / (duration / 16);
-                let current = 0;
-
-                const timer = setInterval(() => {
-                    current += increment;
-                    if (current >= target) {
-                        element.textContent = target + (element.classList.contains('cifra-numero') ? '+' : '');
-                        clearInterval(timer);
-                    } else {
-                        element.textContent = Math.floor(current);
-                    }
-                }, 16);
-            });
-        }
-
-        // Observar cuando la sección de cifras es visible
-        const cifrasObserver = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    animateNumbers();
-                    cifrasObserver.unobserve(entry.target);
-                }
-            });
-        }, { threshold: 0.5 });
-
-        const cifrasSection = document.querySelector('.cifras-amiti');
-        if (cifrasSection) {
-            cifrasObserver.observe(cifrasSection);
-        }
-
-        // También observar la sección de introducción para sus estadísticas
-        const introSection = document.querySelector('.introduccion-amiti');
-        if (introSection) {
-            cifrasObserver.observe(introSection);
-        }
+        },
+    });
 
 
-        const mvImages = [
+    const mvImages = [
             'assets/img/nosotros/1.jpg',
             'assets/img/nosotros/2.jpg',
             'assets/img/nosotros/3.jpg',
@@ -662,8 +612,6 @@
 
         updateMV();
         startAuto();
-
-
     </script>
 </body>
 
