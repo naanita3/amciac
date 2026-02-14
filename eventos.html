@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="format-detection" content="direction=no">
+    <title>Eventos - AMCI</title>
+    <meta name="description"
+        content="Eventos AMCI: Congresos, capacitaciones, webinars y encuentros del sector concretero independiente.">
+    <meta name="keywords" content="concreto, eventos, congreso, capacitación, webinar, industria, construcción">
+    <link rel="shortcut icon" href="assets/img/logo/favicon.png">
+
+    <!-- ICONS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- Fuente Poppins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Animate on Scroll CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <!-- Swiper para carruseles -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+
+    <!-- CSS Global -->
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- Estilos específicos para Eventos -->
+    <link rel="stylesheet" href="css/eventos.css">
+</head>
+
+<body>
+
+    <div id="page-loader">
+        <div class="loader-content">
+            <img src="assets/img/logo/logoamci.png" alt="AMCI">
+            <span>Cargando...</span>
+        </div>
+    </div>
+
+    <div id="cookie-banner">
+        <p>
+            Utilizamos cookies para mejorar tu experiencia.
+            <a href="#">Ver política</a>
+        </p>
+        <button id="accept-cookies">Aceptar</button>
+    </div>
+
+    <header>
+        <div class="logo">
+            <img src="assets/img/logo/logoamci.png" alt="AMCI">
+        </div>
+
+        <div class="menu-toggle" id="menuToggle">☰</div>
+
+        <nav id="mainNav" class="indexnav">
+            <div class="close-menu" id="closeMenu">×</div>
+
+            <ul>
+                <li><a href="index.html">INICIO</a></li>
+
+                <li class="dropdown-item">
+                    <a href="#">AMCI</a>
+                    <div class="dropdown-menu">
+                        <a href="nosotros.html">Sobre Nosotros</a>
+                        <a href="mesa-directiva.html">Mesa Directiva</a>
+                        <a href="eventos.html">Eventos</a>
+                        <a href="amci-store.html">AMCISTORE</a>
+                    </div>
+                </li>
+
+                <li class="dropdown-item">
+                    <a href="#">MIEMBROS</a>
+                    <div class="dropdown-menu">
+                        <a href="proveedores.html">
+                            <p>Padrón de Proveedores</p>
+                        </a>
+                        <a href="socios.html">Socios</a>
+                        <a href="afiliacion.html">Afiliación</a>
+                    </div>
+                </li>
+
+                <li class="dropdown-item">
+                    <a href="#">CONVENIOS</a>
+                    <div class="dropdown-menu">
+                        <a href="beneficios.html">Beneficios</a>
+                        <a href="convenios.html">Convenios</a>
+                    </div>
+                </li>
+
+                <li class="dropdown-item">
+                    <a href="#">CAPACITACIONES</a>
+                    <div class="dropdown-menu">
+                        <a href="cursos.html">Cursos</a>
+                        <a href="certificaciones.html">Certificaciones</a>
+                        <a href="eventos.html">Eventos</a>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- ===== HERO DE EVENTOS CON PARTÍCULAS ===== -->
+    <section class="eventos-hero">
+        <div class="eventos-hero-particles" id="particles"></div>
+        <div class="eventos-hero-content" data-aos="fade-up">
+            <h1>EVENTOS</span></h1>
+            <p>Capacitación, networking e innovación para la industria concretera</p>
+            <div class="eventos-hero-line"></div>
+        </div>
+    </section>
+
+    <!-- ===== FILTROS DE EVENTOS ===== -->
+    <section class="eventos-section">
+        <div class="eventos-container">
+            <div data-aos="fade-right">
+                <h2 class="eventos-section-title">PRÓXIMOS <span>EVENTOS</span></h2>
+                <p class="section-subtitle">Mantente al día con nuestra agenda de eventos regionales, webinars, cursos y
+                    desayunos networking.</p>
+            </div>
+
+            <div class="eventos-filters" data-aos="fade-up" data-aos-delay="100">
+                <button class="evento-filter-btn active" data-filter="todos"><i class="fas fa-calendar-alt"></i>
+                    Todos</button>
+                <button class="evento-filter-btn" data-filter="proximos"><i class="fas fa-clock"></i> Próximos</button>
+                <button class="evento-filter-btn" data-filter="pasados"><i class="fas fa-history"></i> Pasados</button>
+                <button class="evento-filter-btn" data-filter="capacitacion"><i class="fas fa-graduation-cap"></i>
+                    Capacitación</button>
+                <button class="evento-filter-btn" data-filter="evento regional"><i class="fas fa-users"></i> Evento regional</button>
+                <button class="evento-filter-btn" data-filter="expos"><i class="fas fa-hard-hat"></i> Expos</button>
+            </div>
+
+            <!-- GRID DE EVENTOS -->
+            <div class="eventos-grid" id="eventosGrid">
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== CALENDARIO CREATIVO ===== -->
+    <section class="eventos-section calendario-section">
+        <div class="eventos-container">
+            <div class="calendario-grid">
+                <div data-aos="fade-right">
+                    <h2 class="eventos-section-title">CALENDARIO <span>2026</span></h2>
+                    <p class="section-subtitle">Visualiza todos nuestros eventos en un vistazo.</p>
+
+                    <!-- Calendario visual -->
+                    <div class="calendario-mensual">
+                        <div class="calendario-header">
+                            <h3 class="calendario-mes" id="currentMonth">Febrero 2026</h3>
+                            <div class="calendario-nav">
+                                <button class="cal-nav-btn" id="prevMonth"><i class="fas fa-chevron-left"></i></button>
+                                <button class="cal-nav-btn" id="nextMonth"><i class="fas fa-chevron-right"></i></button>
+                            </div>
+                        </div>
+                        <div class="dias-semana">
+                            <div>Lun</div>
+                            <div>Mar</div>
+                            <div>Mié</div>
+                            <div>Jue</div>
+                            <div>Vie</div>
+                            <div>Sáb</div>
+                            <div>Dom</div>
+                        </div>
+                        <div class="dias-grid" id="calendarDays">
+                            <!-- Se llena con JS -->
+                        </div>
+                    </div>
+                </div>
+
+                <div data-aos="fade-left" data-aos-delay="150">
+                    <div class="calendario-eventos-lista">
+                        <h3 class="lista-titulo">
+                            <i class="fas fa-star" style="color: #f39c12;"></i>
+                            Eventos del mes
+                        </h3>
+                        <div id="eventosDelMes">
+                            <!-- Se llena con JS -->
+                            <div class="evento-mini">
+                                <div class="evento-mini-fecha">
+                                    <span class="evento-mini-dia">03</span>
+                                    <span class="evento-mini-mes">MAR</span>
+                                </div>
+                                <div class="evento-mini-info">
+                                    <div class="evento-mini-titulo">CONEXPO-CON/AGG</div>
+                                    <div class="evento-mini-ubicacion">
+                                        <i class="fas fa-map-marker-alt"></i> Las Vegas
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="evento-mini">
+                                <div class="evento-mini-fecha">
+                                    <span class="evento-mini-dia">11</span>
+                                    <span class="evento-mini-mes">MAR</span>
+                                </div>
+                                <div class="evento-mini-info">
+                                    <div class="evento-mini-titulo">1ª Reunión Anual de Concreteros – Zona Sureste 2026</div>
+                                    <div class="evento-mini-ubicacion">
+                                        <i class="fas fa-map-marker-alt"></i> Mérida
+                                    </div>
+                                </div>
+                            </div>
+                          <!-- <div class="evento-mini">
+                                <div class="evento-mini-fecha">
+                                    <span class="evento-mini-dia">22</span>
+                                    <span class="evento-mini-mes">MAR</span>
+                                </div>
+                                <div class="evento-mini-info">
+                                    <div class="evento-mini-titulo">Curso: Dosificación de mezclas</div>
+                                    <div class="evento-mini-ubicacion">
+                                        <i class="fas fa-building"></i> CDMX
+                                    </div> 
+                                </div>
+                            </div> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== MOMENTOS DESTACADOS ===== -->
+    <section class="eventos-section momentos-section">
+        <div class="eventos-container">
+            <div data-aos="fade-up">
+                <h2 class="eventos-section-title">MOMENTOS <span>DESTACADOS</span></h2>
+                <p class="section-subtitle" style="color: rgba(255,255,255,0.8);">Revive los mejores momentos de
+                    nuestros eventos pasados.</p>
+            </div>
+
+            <div class="momentos-grid" id="momentosGrid">
+                <!-- Se llena con JS -->
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== CTA AFILIACIÓN ===== -->
+    <section class="afiliate-banner" style="margin-top: 0;">
+        <h2 data-aos="zoom-in">¿QUIERES SER SOCIO <span>AMCI</span>?</h2>
+        <p data-aos="zoom-in">Accede a descuentos exclusivos en todos nuestros eventos y capacitaciones.</p>
+        <a href="beneficios.html" class="btn btn-afiliate" data-aos="zoom-in">CONOCE MÁS</a>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="footer">
+        <div class="footer-content">
+
+            <!-- Columna 1 -->
+            <div class="footer-column footer-brand">
+                <img src="assets/img/logo/logoamci.png" alt="AMCI" class="footer-logo">
+
+                <p>
+                    Somos una Asociación Mexicana comprometida en promover la formalización de la industria concretera
+                    independiente
+                </p>
+
+                <div class="footer-social">
+                    <a href="https://www.facebook.com/mexicoenconcreto"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="https://www.instagram.com/amci.ac/"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://www.linkedin.com/company/asociaci%C3%B3n-mexicana-de-concreteros-independientes/"><i
+                            class="fa-brands fa-linkedin-in"></i></a>
+                    <a href="https://wa.me/5218118044452"><i class="fa-brands fa-whatsapp"></i></a>
+                </div>
+            </div>
+
+            <!-- Columna 2 -->
+            <div class="footer-column">
+                <h3>Navegación</h3>
+                <ul class="footer-links">
+                    <li><i class="fa-solid fa-angle-right"></i><a href="index.html">Inicio</a></li>
+                    <li><i class="fa-solid fa-angle-right"></i><a href="nosotros.html">AMCI</a></li>
+                    <li><i class="fa-solid fa-angle-right"></i><a href="#miembros">Miembros</a></li>
+                    <li><i class="fa-solid fa-angle-right"></i><a href="#convenios">Convenios</a></li>
+                    <li><i class="fa-solid fa-angle-right"></i><a href="#capacitaciones">Capacitación</a></li>
+                    <li><i class="fa-solid fa-angle-right"></i><a href="#blog">Blog</a></li>
+                    <li><i class="fa-solid fa-angle-right"></i><a href="#contacto">Contacto</a></li>
+                </ul>
+            </div>
+
+            <!-- Columna 3 -->
+            <div class="footer-column">
+                <h3>Contacto</h3>
+
+                <div class="footer-contact">
+
+                    <ul>
+                        <li><i class="fa-solid fa-location-dot"></i>
+                            <p><a href="https://maps.app.goo.gl/HgTsrKyP8JxzeWnP8">David Alfaro Siqueiros 106 – Suite
+                                    1700 P.17
+                                    Valle Oriente, 66269 San Pedro Garza García, N.L.</a>
+                            </p>
+                        </li>
+                        <li><i class="fa-solid fa-phone"></i>
+                            <p>Oficina: 81 4739 5426<br>
+                                Socios y proveedores: 81 1804 4452<br>
+                                Rel. gubernamentales y eventos: 81 1804 1943</p>
+                        </li>
+                        <li><i class="fa-solid fa-clock"></i>
+                            <p>Lun – Vie: 08:00 AM – 5:00 PM</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+            <p>© 2026 AMCI. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- ===== BOTÓN VOLVER ARRIBA ===== -->
+    <a href="#" id="globalScrollToTop" class="scroll-to-top" aria-label="Volver arriba">
+        <i class="fa-solid fa-chevron-up"></i>
+    </a>
+
+    <!-- ===== MODAL PARA VER FLYER ===== -->
+    <div id="flyerModal" class="flyer-modal-minimal">
+        <span class="flyer-modal-minimal-close">&times;</span>
+        <img id="flyerModalImage" class="flyer-modal-minimal-img" src="" alt="Flyer del evento">
+        <a id="flyerDownloadLink" href="#" download class="flyer-modal-download-btn">
+            <i class="fas fa-download"></i> Descargar
+        </a>
+    </div>
+
+
+    <!-- ===== SCRIPTS ===== -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="script.js"></script>
+
+    <script src="script/eventos.js"></script>
+
+</body>
+
+</html>

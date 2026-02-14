@@ -1,0 +1,979 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AMCISTORE</title>
+	<link rel="shortcut icon" href="assets/icon/favicon.png">
+    <link href="https://fonts.googleapis.com/css2?family=Cal+Sans:ital,wght@0,400;0,600;0,700;1,400&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --picton-blue: #29ACE3;
+            --cobalt-blue: #0D43AF;
+            --black: #000000;
+            --polynesian-blue: #1050A1;
+            --dim-gray: #64696A;
+            --light-gray: #f5f7f8;
+            --white: #ffffff;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Manrope', sans-serif;
+            color: var(--black);
+            background-color: var(--light-gray);
+            line-height: 1.6;
+        }
+        
+        h1, h2, h3, h4, h5 {
+            font-family: 'Cal Sans', sans-serif;
+            font-weight: 600;
+        }
+        
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Header */
+        header {
+            background: linear-gradient(135deg, var(--polynesian-blue) 0%, var(--cobalt-blue) 100%);
+            color: var(--white);
+            padding: 20px 0;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+        
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-family: 'Cal Sans', sans-serif;
+            font-size: 28px;
+            font-weight: 700;
+        }
+        
+        .logo span {
+            color: var(--picton-blue);
+        }
+        
+        /* Search and Filters */
+        .search-filters {
+            background-color: var(--white);
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+        }
+        
+        .search-box {
+            display: flex;
+            margin-bottom: 15px;
+        }
+        
+        .search-box input {
+            flex: 1;
+            padding: 12px 15px;
+            border: 1px solid #ddd;
+            border-radius: 4px 0 0 4px;
+            font-family: 'Manrope', sans-serif;
+            font-size: 16px;
+        }
+        
+        .search-box button {
+            background-color: var(--cobalt-blue);
+            color: white;
+            border: none;
+            padding: 0 20px;
+            border-radius: 0 4px 4px 0;
+            cursor: pointer;
+        }
+        
+        .filters {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+        
+        .filter-group {
+            flex: 1;
+            min-width: 200px;
+        }
+        
+        .filter-group select {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-family: 'Manrope', sans-serif;
+        }
+        
+        /* Machine Grid */
+        .machine-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 25px;
+            margin: 30px 0;
+        }
+        
+        .machine-card {
+            background-color: var(--white);
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .machine-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.12);
+        }
+        
+        .machine-image {
+            height: 200px;
+            overflow: hidden;
+            position: relative;
+            cursor: pointer;
+        }
+        
+        .machine-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+        
+        .machine-card:hover .machine-image img {
+            transform: scale(1.05);
+        }
+        
+        .image-count {
+            position: absolute;
+            bottom: 10px;
+            right: 10px;
+            background-color: rgba(0, 0, 0, 0.7);
+            color: white;
+            padding: 5px 10px;
+            border-radius: 20px;
+            font-size: 14px;
+        }
+        
+        .machine-info {
+            padding: 20px;
+        }
+        
+        .machine-title {
+            font-size: 20px;
+            margin-bottom: 10px;
+            color: var(--cobalt-blue);
+        }
+        
+        .machine-details {
+            color: var(--dim-gray);
+            margin-bottom: 15px;
+            font-size: 14px;
+        }
+        
+        .machine-price {
+            font-size: 22px;
+            font-weight: 700;
+            color: var(--polynesian-blue);
+            margin-bottom: 15px;
+        }
+        
+        .seller-info {
+            border-top: 1px solid #eee;
+            padding-top: 15px;
+            margin-top: 15px;
+        }
+        
+        .seller-name {
+            font-weight: 600;
+            color: var(--cobalt-blue);
+        }
+        
+        .seller-location {
+            color: var(--dim-gray);
+            font-size: 14px;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            margin-top: 5px;
+        }
+        
+        .view-details {
+            display: block;
+            text-align: center;
+            background-color: var(--picton-blue);
+            color: white;
+            padding: 12px;
+            text-decoration: none;
+            border-radius: 4px;
+            margin-top: 15px;
+            font-weight: 600;
+            transition: background-color 0.3s ease;
+        }
+        
+        .view-details:hover {
+            background-color: var(--cobalt-blue);
+        }
+        
+        /* Modal */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            z-index: 1000;
+            overflow: auto;
+            padding: 20px;
+        }
+        
+        .modal-content {
+            background-color: var(--white);
+            margin: auto;
+            max-width: 1000px;
+            border-radius: 8px;
+            overflow: hidden;
+            animation: modalFade 0.3s;
+        }
+
+        .logoamci {
+            height: 4rem;
+            width: auto;
+        }
+        
+        @keyframes modalFade {
+            from {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .modal-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 20px;
+            background-color: var(--polynesian-blue);
+            color: white;
+        }
+        
+        .close-modal {
+            font-size: 24px;
+            cursor: pointer;
+            background: none;
+            border: none;
+            color: white;
+        }
+        
+        .modal-body {
+            display: flex;
+            flex-direction: column;
+            padding: 0;
+        }
+        
+        @media (min-width: 768px) {
+            .modal-body {
+                flex-direction: row;
+            }
+        }
+        
+        .modal-images {
+            flex: 1;
+            position: relative;
+        }
+        
+        .main-image {
+            height: 400px;
+            overflow: hidden;
+        }
+        
+        .main-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+        
+        .image-thumbnails {
+            display: flex;
+            gap: 10px;
+            padding: 15px;
+            overflow-x: auto;
+            background-color: #f9f9f9;
+        }
+        
+        .thumbnail {
+            width: 80px;
+            height: 60px;
+            cursor: pointer;
+            border: 2px solid transparent;
+            border-radius: 4px;
+            overflow: hidden;
+        }
+        
+        .thumbnail.active {
+            border-color: var(--picton-blue);
+        }
+        
+        .thumbnail img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .modal-info {
+            flex: 1;
+            padding: 20px;
+            background-color: var(--white);
+        }
+        
+        .modal-title {
+            font-size: 24px;
+            color: var(--cobalt-blue);
+            margin-bottom: 10px;
+        }
+        
+        .modal-price {
+            font-size: 28px;
+            color: var(--polynesian-blue);
+            font-weight: 700;
+            margin-bottom: 15px;
+        }
+        
+        .modal-description {
+            margin-bottom: 20px;
+            line-height: 1.6;
+        }
+        
+        .specs-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+        
+        .spec-item {
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .spec-label {
+            font-size: 12px;
+            color: var(--dim-gray);
+        }
+        
+        .spec-value {
+            font-weight: 500;
+        }
+        
+        .contact-seller {
+            background-color: var(--picton-blue);
+            color: white;
+            border: none;
+            padding: 15px;
+            border-radius: 4px;
+            font-weight: 600;
+            cursor: pointer;
+            width: 100%;
+            margin-top: 20px;
+            transition: background-color 0.3s ease;
+        }
+        
+        .contact-seller:hover {
+            background-color: var(--cobalt-blue);
+        }
+        
+        .contact-whatsapp {
+            background-color: #25D366;
+        }
+        
+        .contact-whatsapp:hover {
+            background-color: #128C7E;
+        }
+        
+        .contact-phone {
+            background-color: var(--polynesian-blue);
+        }
+        
+        .disclaimer {
+            background-color: #fff9e6;
+            border-left: 4px solid #ffcc00;
+            padding: 15px;
+            margin-top: 20px;
+            font-size: 14px;
+            color: #666;
+        }
+        
+        .no-results {
+            grid-column: 1 / -1;
+            text-align: center;
+            padding: 40px;
+            background-color: var(--white);
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+        }
+        
+        .no-results i {
+            font-size: 48px;
+            color: var(--dim-gray);
+            margin-bottom: 15px;
+        }
+        
+        .no-results h3 {
+            color: var(--cobalt-blue);
+            margin-bottom: 10px;
+        }
+        
+        /* Footer */
+        footer {
+            background-color: var(--dim-gray);
+            color: white;
+            padding: 40px 0;
+            margin-top: 60px;
+        }
+        
+        .footer-content {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 40px;
+        }
+        
+        .footer-section {
+            flex: 1;
+            min-width: 250px;
+        }
+        
+        .footer-section h3 {
+            margin-bottom: 15px;
+            font-size: 18px;
+        }
+        
+        .footer-bottom {
+            text-align: center;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+                text-align: center;
+                gap: 15px;
+            }
+            
+            .machine-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .modal-body {
+                flex-direction: column;
+            }
+            
+            .main-image {
+                height: 300px;
+            }
+        }
+
+        .logoamci2{
+            height: 1.5rem;
+            width: auto;
+        }
+    </style>
+	<!-- Google tag (gtag.js) -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-9WY97M8XYJ"></script>
+	<script>
+	  window.dataLayer = window.dataLayer || [];
+	  function gtag(){dataLayer.push(arguments);}
+	  gtag('js', new Date());
+
+	  gtag('config', 'G-9WY97M8XYJ');
+	</script>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo"><img src="assets/img/marketplace/logo_AMCI2.png" class="logoamci2"><span>Store</span></div>
+                <div class="header-info">
+                    <p>Marketplace exclusivo para socios</p>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container">
+        <h2 style="margin: 30px 0 20px; text-align: center; color: var(--cobalt-blue);">Maquinaria Disponible</h2>
+        <div class="disclaimer">
+                        <p><strong>Nota importante:</strong> AMCI actúa únicamente como plataforma de visualización. Todas las transacciones se realizan directamente entre comprador y vendedor. No nos hacemos responsables de los acuerdos alcanzados.</p>
+                    </div>
+        
+        <!-- Search and Filters -->
+        <div class="search-filters">
+            <div class="search-box">
+                <input type="text" id="searchInput" placeholder="Buscar maquinaria...">
+                <button id="searchButton"><i class="fas fa-search"></i></button>
+            </div>
+            <div class="filters">
+                <div class="filter-group">
+                    <select id="cityFilter">
+                        <option value="">Todas los estados</option>
+                        <option value="aguascalientes">Aguascalientes</option>
+                        <option value="baja_california">Baja California</option>
+                        <option value="baja_california_sur">Baja California Sur</option>
+                        <option value="campeche">Campeche</option>
+                        <option value="chiapas">Chiapas</option>
+                        <option value="chihuahua">Chihuahua</option>
+                        <option value="ciudad_de_mexico">Ciudad de México</option>
+                        <option value="coahuila">Coahuila</option>
+                        <option value="colima">Colima</option>
+                        <option value="durango">Durango</option>
+                        <option value="estado_de_mexico">Estado de México</option>
+                        <option value="guanajuato">Guanajuato</option>
+                        <option value="guerrero">Guerrero</option>
+                        <option value="hidalgo">Hidalgo</option>
+                        <option value="jalisco">Jalisco</option>
+                        <option value="michoacan">Michoacán</option>
+                        <option value="morelos">Morelos</option>
+                        <option value="nayarit">Nayarit</option>
+                        <option value="nuevo_leon">Nuevo León</option>
+                        <option value="oaxaca">Oaxaca</option>
+                        <option value="puebla">Puebla</option>
+                        <option value="queretaro">Querétaro</option>
+                        <option value="quintana_roo">Quintana Roo</option>
+                        <option value="san_luis_potosi">San Luis Potosí</option>
+                        <option value="sinaloa">Sinaloa</option>
+                        <option value="sonora">Sonora</option>
+                        <option value="tabasco">Tabasco</option>
+                        <option value="tamaulipas">Tamaulipas</option>
+                        <option value="tlaxcala">Tlaxcala</option>
+                        <option value="veracruz">Veracruz</option>
+                        <option value="yucatan">Yucatán</option>
+                        <option value="zacatecas">Zacatecas</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <select id="companyFilter">
+                        <option value="">Todas las empresas</option>
+                        <option value="Sin especificación">Sin especificación.</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <select id="categoryFilter">
+                        <option value="">Todas las categorías</option>
+                        <option value="construccion">Construcción</option>
+                        <option value="industrial">Industrial</option>
+                        <option value="transporte">Transporte</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Machine Grid -->
+        <div class="machine-grid" id="machineGrid">
+            <!-- Machines will be loaded here by JavaScript -->
+        </div>
+    </main>
+
+    <!-- Modal -->
+    <div class="modal" id="machineModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 id="modalTitle">Título de la máquina</h3>
+                <button class="close-modal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="modal-images">
+                    <div class="main-image">
+                        <img id="mainImage" src="" alt="Vista principal">
+                    </div>
+                    <div class="image-thumbnails" id="thumbnails">
+                        <!-- Thumbnails will be loaded here by JavaScript -->
+                    </div>
+                </div>
+                <div class="modal-info">
+                    <h2 class="modal-title" id="modalMachineTitle">Máquina Industrial</h2>
+                    <div class="modal-price" id="modalPrice">25.000 €</div>
+                    <p class="modal-description" id="modalDescription">Descripción detallada de la máquina. Incluye todas las características principales y el estado en el que se encuentra.</p>
+                    
+                    <h4>Especificaciones</h4>
+                    <div class="specs-grid">
+                        <div class="spec-item">
+                            <span class="spec-label">Año</span>
+                            <span class="spec-value" id="specYear">2020</span>
+                        </div>
+                        <div class="spec-item">
+                            <span class="spec-label">Horas de uso</span>
+                            <span class="spec-value" id="specHours">1.200 h</span>
+                        </div>
+                        <div class="spec-item">
+                            <span class="spec-label">Estado</span>
+                            <span class="spec-value" id="specCondition">Excelente</span>
+                        </div>
+                        <div class="spec-item">
+                            <span class="spec-label">Marca</span>
+                            <span class="spec-value" id="specBrand">Marca Ejemplo</span>
+                        </div>
+                        <div class="spec-item">
+                            <span class="spec-label">Modelo</span>
+                            <span class="spec-value" id="specModel">XT-5000</span>
+                        </div>
+                        <div class="spec-item">
+                            <span class="spec-label">Ubicación</span>
+                            <span class="spec-value" id="specLocation">Madrid</span>
+                        </div>
+                    </div>
+                    
+                    <div class="seller-info">
+                        <h4>Información del vendedor</h4>
+                        <p class="seller-name" id="sellerName">Empresa Ejemplo S.L.</p>
+                        <p class="seller-location"><i class="fas fa-map-marker-alt"></i> <span id="sellerLocation">Madrid, España</span></p>
+                        <p class="seller-contact"><i class="fas fa-phone"></i> <span id="sellerPhone">+34 912 345 678</span></p>
+                        <p class="seller-email"><i class="fas fa-envelope"></i> <span id="sellerEmail">contacto@empresa.com</span></p>
+                    </div>
+                    
+                    <button class="contact-seller" id="contactButton">Contactar al vendedor</button>
+                    
+                    <div class="disclaimer">
+                        <p><strong>Nota importante:</strong> AMCI actúa únicamente como plataforma de visualización. Todas las transacciones se realizan directamente entre comprador y vendedor. No nos hacemos responsables de los acuerdos alcanzados.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <img src="assets/img/marketplace/logo_AMCI.png" class="logoamci">
+                    <p>Plataforma exclusiva para socios para promoción de maquinaria.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Contacto</h3>
+                    <p>marketing@amciac.org</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Legal</h3>
+                    <p>Los vendedores son autónomos y responsables de sus publicaciones.</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Asociación Mexicana de concreteros independientes. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Sample machine data
+        const machines = [
+            {
+                id: 1,
+                title: "Camión Bomba de Concreto Mack (33m) - Reparación Total",
+				price: "$ Sin especificación",
+				year: 2006,
+				hours: "Sin uso después de reparación total.",
+				condition: "Excelente estado",
+				brand: "Mack",
+				model: "Sin especificar (Bomba JUNJIN)",
+				location: "Colima",
+				category: "construccion",
+				description: "Se vende camión bomba de concreto Mack, año 2006 en Manzanillo, Colima. Cuenta con una bomba marca JUNJIN de 33 metros. La unidad fue reparada totalmente, nuevo sin usar. El mantenimiento está al 100%. El camión no ha sido usado desde su reparación completa. Listo para trabajar.",
+				seller: {
+					name: "EPCON Concretos",
+					location: "Colima",
+					phone: "312 311 9857",
+					whatsapp: "+523123119857"
+				},
+				images: [
+					"assets/img/marketplace/bomba1.jpg",
+					"assets/img/marketplace/bomba2.jpg",
+					"assets/img/marketplace/bomba3.jpg",
+					"assets/img/marketplace/bomba 4.jpg",
+					"assets/img/marketplace/bomba5.jpg"
+				]
+            },
+            {
+                id: 2,
+                title: "Camión Mack MR688S con Bomba Schwing",
+				price: "$ Sin especificación", 
+				year: 2006,
+				hours: "Sin especificación.",
+				condition: "Buen estado",
+				brand: "Mack",
+				model: "MR688S",
+				location: "Colima",
+				category: "construccion",
+				description: "Se vende camión Mack MR688S año 2006 equipado con bomba Schwing. Cuenta con transmisión Maxitorque de 8 velocidades, funciona con combustible diésel, incluye estabilizador tipo A, brazo de 41 metros con 4 secciones en despliegue tipo X. Ideal para proyectos de construcción que requieren alcance y potencia en bombeo de concreto.",
+				seller: {
+					name: "Sin especificación.",
+					location: "Colima",
+					phone: "314 122 2914 / 314 124 0895",
+					email: "sgtorres1@hotmail.com"
+				},
+				images: [
+					"assets/img/marketplace/bomba.jpg" 
+				]
+            },
+			{
+				id: 3,
+				title: "Camión International Paystar 5600i",
+                price: "$900,000.00 MXN + IVA",
+                year: 2006,
+                hours: "Sin especificación.",
+                condition: "Buen estado",
+                brand: "International Truck and Engine Corporation",
+                model: "Paystar 5600i",
+                location: "Tamaulipas",
+                category: "transporte", // Añadida categoría
+                description: "Se vende Camión International Paystar 5600i modelo 2006, vehículo especial tipo mezclador de concreto. Diseñado para la industria de la construcción, este camión ofrece gran resistencia y desempeño, siendo una opción confiable para el transporte y mezclado de concreto en obra.",
+                seller: {
+                    name: "Sin especificación.",
+                    location: "Tamaulipas",
+                    phone: "899 122 8280",
+                    whatsapp: "+528991228280"
+                },
+                images: [
+                    "assets/img/marketplace/foto3.jpg",
+                    "assets/img/marketplace/foto4.jpg"
+                ]
+			},
+			{
+				id: 4,
+				title: "Camión Internacional Car 15",
+                price: "$900,000.00 MXN + IVA",
+                year: 2006,
+                hours: "Sin especificación.",
+                condition: "Muy buen estado",
+                brand: "International",
+                model: "CAR 15",
+                location: "Tamaulipas",
+                category: "transporte", // Añadida categoría
+                description: "Se vende Camión International CAR 15 modelo 2006, vehículo especial tipo mezclador de concreto, equipado con motor Cummins ISX 5600 de 500 HP y configuración de chasis cabina. Es una unidad robusta, potente y lista para trabajar en obras de construcción, ideal para quienes busca un mezclador confiable y funcional.",
+                seller: {
+                    name: "Sin especificación.",
+                    location: "Tamaulipas",
+                    phone: "899 122 8280",
+                    whatsapp: "+528991228280"
+                },
+                images: [
+                    "assets/img/marketplace/foto1.jpg",
+                    "assets/img/marketplace/foto2.jpg"
+                ]
+},
+        ];
+
+        // Render machine cards
+        function renderMachineCards(machinesToRender = machines) {
+            const machineGrid = document.getElementById('machineGrid');
+            machineGrid.innerHTML = '';
+            
+            if (machinesToRender.length === 0) {
+                machineGrid.innerHTML = `
+                    <div class="no-results">
+                        <i class="fas fa-search"></i>
+                        <h3>No se encontraron resultados</h3>
+                        <p>Intenta ajustar los filtros o términos de búsqueda</p>
+                    </div>
+                `;
+                return;
+            }
+            
+            machinesToRender.forEach(machine => {
+                const card = document.createElement('div');
+                card.className = 'machine-card';
+                card.innerHTML = `
+                    <div class="machine-image" onclick="openModal(${machine.id})">
+                        <img src="${machine.images[0]}" alt="${machine.title}">
+                        <div class="image-count">${machine.images.length} imágenes</div>
+                    </div>
+                    <div class="machine-info">
+                        <h3 class="machine-title">${machine.title}</h3>
+                        <div class="machine-details">
+                            <div>${machine.brand} ${machine.model} • ${machine.year}</div>
+                            <div>${machine.hours} • ${machine.condition}</div>
+                        </div>
+                        <div class="machine-price">${machine.price}</div>
+                        <div class="seller-info">
+                            <div class="seller-name">${machine.seller.name}</div>
+                            <div class="seller-location">
+                                <i class="fas fa-map-marker-alt"></i> ${machine.location}
+                            </div>
+                        </div>
+                        <a href="#" class="view-details" onclick="openModal(${machine.id}); return false;">Ver detalles</a>
+                    </div>
+                `;
+                machineGrid.appendChild(card);
+            });
+        }
+
+        // Filter machines based on search and filters
+        function filterMachines() {
+            const searchText = document.getElementById('searchInput').value.toLowerCase();
+            const cityFilter = document.getElementById('cityFilter').value.toLowerCase();
+            const companyFilter = document.getElementById('companyFilter').value.toLowerCase();
+            const categoryFilter = document.getElementById('categoryFilter').value.toLowerCase();
+            
+            const filteredMachines = machines.filter(machine => {
+                // Search text filter
+                const matchesSearch = searchText === '' || 
+                    machine.title.toLowerCase().includes(searchText) ||
+                    machine.brand.toLowerCase().includes(searchText) ||
+                    machine.model.toLowerCase().includes(searchText) ||
+                    machine.description.toLowerCase().includes(searchText);
+                
+                // City filter
+                const matchesCity = cityFilter === '' || 
+                    machine.location.toLowerCase().includes(cityFilter);
+                
+                // Company filter
+                const matchesCompany = companyFilter === '' || 
+                    machine.seller.name.toLowerCase().includes(companyFilter);
+                
+                // Category filter - CORRECCIÓN PRINCIPAL
+                const matchesCategory = categoryFilter === '' || 
+                    (machine.category && machine.category.toLowerCase() === categoryFilter);
+                
+                return matchesSearch && matchesCity && matchesCompany && matchesCategory;
+            });
+            
+            renderMachineCards(filteredMachines);
+        }
+
+        // Open modal with machine details
+        function openModal(machineId) {
+            const machine = machines.find(m => m.id === machineId);
+            if (!machine) return;
+            
+            // Set modal content
+            document.getElementById('modalTitle').textContent = machine.title;
+            document.getElementById('modalMachineTitle').textContent = machine.title;
+            document.getElementById('modalPrice').textContent = machine.price;
+            document.getElementById('modalDescription').textContent = machine.description;
+            document.getElementById('specYear').textContent = machine.year;
+            document.getElementById('specHours').textContent = machine.hours;
+            document.getElementById('specCondition').textContent = machine.condition;
+            document.getElementById('specBrand').textContent = machine.brand;
+            document.getElementById('specModel').textContent = machine.model;
+            document.getElementById('specLocation').textContent = machine.location;
+            document.getElementById('sellerName').textContent = machine.seller.name;
+            document.getElementById('sellerLocation').textContent = machine.seller.location;
+            document.getElementById('sellerPhone').textContent = machine.seller.phone;
+            
+            // Handle email or WhatsApp display
+            const sellerEmailElement = document.getElementById('sellerEmail');
+            if (machine.seller.email) {
+                sellerEmailElement.textContent = machine.seller.email;
+                sellerEmailElement.closest('p').style.display = 'block';
+            } else {
+                sellerEmailElement.closest('p').style.display = 'none';
+            }
+            
+            // Set main image
+            document.getElementById('mainImage').src = machine.images[0];
+            
+            // Create thumbnails
+            const thumbnailsContainer = document.getElementById('thumbnails');
+            thumbnailsContainer.innerHTML = '';
+            
+            machine.images.forEach((image, index) => {
+                const thumbnail = document.createElement('div');
+                thumbnail.className = 'thumbnail' + (index === 0 ? ' active' : '');
+                thumbnail.innerHTML = `<img src="${image}" alt="Thumbnail ${index + 1}">`;
+                thumbnail.addEventListener('click', () => {
+                    document.getElementById('mainImage').src = image;
+                    document.querySelectorAll('.thumbnail').forEach(t => t.classList.remove('active'));
+                    thumbnail.classList.add('active');
+                });
+                thumbnailsContainer.appendChild(thumbnail);
+            });
+            
+            // Configure contact button based on available contact methods
+            const contactButton = document.getElementById('contactButton');
+            
+            // Remove any existing event listeners
+            const newContactButton = contactButton.cloneNode(true);
+            contactButton.parentNode.replaceChild(newContactButton, contactButton);
+            
+            // Add appropriate contact method
+            if (machine.seller.whatsapp) {
+                newContactButton.textContent = "Contactar por WhatsApp";
+                newContactButton.classList.add('contact-whatsapp');
+                newContactButton.addEventListener('click', function() {
+                    const message = `Hola, estoy interesado en la máquina: ${machine.title}`;
+                    window.open(`https://wa.me/${machine.seller.whatsapp}?text=${encodeURIComponent(message)}`, '_blank');
+                });
+            } else if (machine.seller.email) {
+                newContactButton.textContent = "Contactar por Email";
+                newContactButton.classList.remove('contact-whatsapp', 'contact-phone');
+                newContactButton.addEventListener('click', function() {
+                    const subject = `Consulta sobre: ${machine.title}`;
+                    window.location.href = `mailto:${machine.seller.email}?subject=${encodeURIComponent(subject)}`;
+                });
+            } else {
+                newContactButton.textContent = "Llamar por Teléfono";
+                newContactButton.classList.add('contact-phone');
+                newContactButton.addEventListener('click', function() {
+                    window.location.href = `tel:${machine.seller.phone}`;
+                });
+            }
+            
+            // Show modal
+            document.getElementById('machineModal').style.display = 'block';
+        }
+
+        // Close modal
+        function closeModal() {
+            document.getElementById('machineModal').style.display = 'none';
+        }
+
+        // Event listeners
+        document.querySelector('.close-modal').addEventListener('click', closeModal);
+        window.addEventListener('click', (event) => {
+            if (event.target === document.getElementById('machineModal')) {
+                closeModal();
+            }
+        });
+
+        // Initialize
+        document.addEventListener('DOMContentLoaded', () => {
+            renderMachineCards();
+            
+            // Add filter functionality
+            const searchInput = document.getElementById('searchInput');
+            const searchButton = document.getElementById('searchButton');
+            const cityFilter = document.getElementById('cityFilter');
+            const companyFilter = document.getElementById('companyFilter');
+            const categoryFilter = document.getElementById('categoryFilter');
+            
+            searchInput.addEventListener('input', filterMachines);
+            searchButton.addEventListener('click', filterMachines);
+            cityFilter.addEventListener('change', filterMachines);
+            companyFilter.addEventListener('change', filterMachines);
+            categoryFilter.addEventListener('change', filterMachines);
+        });
+    </script>
+</body>
+</html>

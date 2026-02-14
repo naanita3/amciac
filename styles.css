@@ -7,6 +7,11 @@
     --transition: all 0.3s ease;
 }
 
+html,
+body {
+    overflow-x: hidden;
+}
+
 * {
     margin: 0;
     padding: 0;
