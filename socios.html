@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="format-detection" content="direction=no">
+    <title>Socios - AMCI</title>
+    <link rel="shortcut icon" href="assets/img/logo/favicon.png">
+
+    <!-- ICONS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- Fuente Poppins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <!-- Animate on Scroll -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- CSS Global -->
+    <link rel="stylesheet" href="styles.css">
+    <!-- CSS Específico -->
+    <link rel="stylesheet" href="css/socios.css">
+</head>
+
+<body>
+
+   <div id="page-loader">
+        <div class="loader-content">
+            <img src="assets/img/logo/logoamci.png" alt="AMCI">
+            <span>Cargando...</span>
+        </div>
+    </div>
+
+    <div id="cookie-banner">
+        <p>
+            Utilizamos cookies para mejorar tu experiencia.
+            <a href="#">Ver política</a>
+        </p>
+        <button id="accept-cookies">Aceptar</button>
+    </div>
+
+    <header>
+        <div class="logo">
+            <img src="assets/img/logo/logoamci.png" alt="AMCI">
+        </div>
+
+        <div class="menu-toggle" id="menuToggle">☰</div>
+
+        <nav id="mainNav" class="indexnav">
+            <div class="close-menu" id="closeMenu">×</div>
+
+            <ul>
+                <li><a href="index.html">INICIO</a></li>
+
+                <li class="dropdown-item">
+                    <a href="#">AMCI</a>
+                    <div class="dropdown-menu">
+                        <a href="nosotros.html">Sobre Nosotros</a>
+                        <a href="mesa-directiva.html">Mesa Directiva</a>
+                        <a href="eventos.html">Eventos</a>
+                        <a href="amci-store.html">AMCISTORE</a>
+                    </div>
+                </li>
+
+                <li class="dropdown-item">
+                    <a href="#">MIEMBROS</a>
+                    <div class="dropdown-menu">
+                        <a href="proveedores.html">
+                            <p>Padrón de Proveedores</p>
+                        </a>
+                        <a href="socios.html">Socios</a>
+                        <a href="afiliacion.html">Afiliación</a>
+                    </div>
+                </li>
+
+                <li class="dropdown-item">
+                    <a href="#">CONVENIOS</a>
+                    <div class="dropdown-menu">
+                        <a href="beneficios.html">Beneficios</a>
+                        <a href="convenios.html">Convenios</a>
+                    </div>
+                </li>
+
+                <li class="dropdown-item">
+                    <a href="#">CAPACITACIONES</a>
+                    <div class="dropdown-menu">
+                        <a href="cursos.html">Cursos</a>
+                        <a href="certificaciones.html">Certificaciones</a>
+                        <a href="eventos.html">Eventos</a>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- ===== HERO PRINCIPAL ===== -->
+    <section class="socios-hero">
+        <div class="hero-overlay"><img src="assets/img/fondos/manos.png" ></div>
+        <div class="hero-content">
+            <div class="hero-badge">RED DE CONCRETERAS</div>
+            <h1 class="hero-title">NUESTROS <span class="titulo">SOCIOS</span></h1>
+            <p class="hero-subtitle">Empresas líderes en la industria del concreto en todo México</p>
+        </div>
+    </section>
+
+    <!-- ===== MAPA SECUNDARIO (rectangular con checkpoints) ===== -->
+    <section class="mapa-secundario">
+        <div class="mapa-titulo" data-aos="fade-up">
+            <span>NUESTROS SOCIOS</span> EN TODO EL PAÍS
+        </div>
+        <div class="mapa-container" data-aos="fade-up" data-aos-delay="100">
+            <div id="socios-map"></div>
+        </div>
+    </section>
+
+    <!-- ===== FILTROS ===== -->
+    <section class="filtros-section">
+        <div class="filtros-container">
+            <div class="search-wrapper">
+                <input type="text" id="buscador" class="search-input" placeholder="Buscar socio por nombre o ciudad...">
+                <button class="search-btn" id="btnBuscar"><i class="fas fa-search"></i></button>
+            </div>
+            <select id="estadoFilter" class="filter-select">
+                <option value="">Todos los estados</option>
+                <option value="Aguascalientes">Aguascalientes</option>
+                <option value="Baja California">Baja California</option>
+                <option value="Baja California Sur">Baja California Sur</option>
+                <option value="Campeche">Campeche</option>
+                <option value="Chiapas">Chiapas</option>
+                <option value="Chihuahua">Chihuahua</option>
+                <option value="Ciudad de México">Ciudad de México</option>
+                <option value="Coahuila">Coahuila</option>
+                <option value="Colima">Colima</option>
+                <option value="Durango">Durango</option>
+                <option value="Estado de México">Estado de México</option>
+                <option value="Guanajuato">Guanajuato</option>
+                <option value="Guerrero">Guerrero</option>
+                <option value="Hidalgo">Hidalgo</option>
+                <option value="Jalisco">Jalisco</option>
+                <option value="Michoacán">Michoacán</option>
+                <option value="Morelos">Morelos</option>
+                <option value="Nayarit">Nayarit</option>
+                <option value="Nuevo León">Nuevo León</option>
+                <option value="Oaxaca">Oaxaca</option>
+                <option value="Puebla">Puebla</option>
+                <option value="Querétaro">Querétaro</option>
+                <option value="Quintana Roo">Quintana Roo</option>
+                <option value="San Luis Potosí">San Luis Potosí</option>
+                <option value="Sinaloa">Sinaloa</option>
+                <option value="Sonora">Sonora</option>
+                <option value="Tabasco">Tabasco</option>
+                <option value="Tamaulipas">Tamaulipas</option>
+                <option value="Tlaxcala">Tlaxcala</option>
+                <option value="Veracruz">Veracruz</option>
+                <option value="Yucatán">Yucatán</option>
+                <option value="Zacatecas">Zacatecas</option>
+            </select>
+        </div>
+
+        <div class="results-counter">
+            Mostrando <span id="resultadosCount">42</span> de <span id="totalCount">42</span> socios
+        </div>
+    </section>
+
+    <!-- ===== GRID DE SOCIOS ===== -->
+    <section class="socios-section">
+        <div class="socios-grid" id="sociosGrid">
+            <!-- Se carga con JS -->
+        </div>
+
+        <!-- Botón limpiar filtros -->
+        <div style="text-align: center; margin-top: 40px; display: none;" id="btnLimpiarContainer">
+            <button class="btn-clear" id="btnLimpiarFiltros">
+                <i class="fas fa-times-circle"></i> Limpiar filtros
+            </button>
+        </div>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="footer">
+        <div class="footer-content">
+
+            <!-- Columna 1 -->
+            <div class="footer-column footer-brand">
+                <img src="assets/img/logo/logoamci.png" alt="AMCI" class="footer-logo">
+
+                <p>
+                    Somos una Asociación Mexicana comprometida en promover la formalización de la industria concretera
+                    independiente
+                </p>
+
+                <div class="footer-social">
+                    <a href="https://www.facebook.com/mexicoenconcreto"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="https://www.instagram.com/amci.ac/"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://www.linkedin.com/company/asociaci%C3%B3n-mexicana-de-concreteros-independientes/"><i
+                            class="fa-brands fa-linkedin-in"></i></a>
+                    <a href="https://wa.me/5218118044452"><i class="fa-brands fa-whatsapp"></i></a>
+                </div>
+            </div>
+
+            <!-- Columna 2 -->
+            <div class="footer-column">
+                <h3>Navegación</h3>
+                <ul class="footer-links">
+                    <li><i class="fa-solid fa-angle-right"></i><a href="index.html">Inicio</a></li>
+                    <li><i class="fa-solid fa-angle-right"></i><a href="nosotros.html">AMCI</a></li>
+                    <li><i class="fa-solid fa-angle-right"></i><a href="#miembros">Miembros</a></li>
+                    <li><i class="fa-solid fa-angle-right"></i><a href="#convenios">Convenios</a></li>
+                    <li><i class="fa-solid fa-angle-right"></i><a href="#capacitaciones">Capacitación</a></li>
+                    <li><i class="fa-solid fa-angle-right"></i><a href="#blog">Blog</a></li>
+                    <li><i class="fa-solid fa-angle-right"></i><a href="#contacto">Contacto</a></li>
+                </ul>
+            </div>
+
+            <!-- Columna 3 -->
+            <div class="footer-column">
+                <h3>Contacto</h3>
+
+                <div class="footer-contact">
+
+                    <ul>
+                        <li><i class="fa-solid fa-location-dot"></i>
+                            <p><a href="https://maps.app.goo.gl/HgTsrKyP8JxzeWnP8">David Alfaro Siqueiros 106 – Suite
+                                    1700 P.17
+                                    Valle Oriente, 66269 San Pedro Garza García, N.L.</a>
+                            </p>
+                        </li>
+                        <li><i class="fa-solid fa-phone"></i>
+                            <p>Oficina: 81 4739 5426<br>
+                                Socios y proveedores: 81 1804 4452<br>
+                                Rel. gubernamentales y eventos: 81 1804 1943</p>
+                        </li>
+                        <li><i class="fa-solid fa-clock"></i>
+                            <p>Lun – Vie: 08:00 AM – 5:00 PM</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+            <p>© 2026 AMCI. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- ===== BOTÓN VOLVER ARRIBA ===== -->
+    <a href="#" id="globalScrollToTop" class="scroll-to-top"><i class="fa-solid fa-chevron-up"></i></a>
+
+    <!-- ===== SCRIPTS ===== -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="script.js"></script>
+    <script src="script/socios.js"></script>
+</body>
+</html>

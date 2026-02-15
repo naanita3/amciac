@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Proveedores - AMCI</title>
+    <link rel="shortcut icon" href="assets/img/logo/favicon.png">
+
+    <!-- ICONS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- Fuente Poppins + Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Animate on Scroll -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- CSS Global -->
+    <link rel="stylesheet" href="styles.css">
+    <!-- CSS Específico -->
+    <link rel="stylesheet" href="css/proveedores.css">
+</head>
+
+<body>
+
+    <div id="page-loader">
+        <div class="loader-content">
+            <img src="assets/img/logo/logoamci.png" alt="AMCI">
+            <span>Cargando...</span>
+        </div>
+    </div>
+
+    <div id="cookie-banner">
+        <p>
+            Utilizamos cookies para mejorar tu experiencia.
+            <a href="#">Ver política</a>
+        </p>
+        <button id="accept-cookies">Aceptar</button>
+    </div>
+
+    <header>
+        <div class="logo">
+            <img src="assets/img/logo/logoamci.png" alt="AMCI">
+        </div>
+
+        <div class="menu-toggle" id="menuToggle">☰</div>
+
+        <nav id="mainNav" class="indexnav">
+            <div class="close-menu" id="closeMenu">×</div>
+
+            <ul>
+                <li><a href="index.html">INICIO</a></li>
+
+                <li class="dropdown-item">
+                    <a href="#">AMCI</a>
+                    <div class="dropdown-menu">
+                        <a href="nosotros.html">Sobre Nosotros</a>
+                        <a href="mesa-directiva.html">Mesa Directiva</a>
+                        <a href="eventos.html">Eventos</a>
+                        <a href="amci-store.html">AMCISTORE</a>
+                    </div>
+                </li>
+
+                <li class="dropdown-item">
+                    <a href="#">MIEMBROS</a>
+                    <div class="dropdown-menu">
+                        <a href="proveedores.html">
+                            <p>Padrón de Proveedores</p>
+                        </a>
+                        <a href="socios.html">Socios</a>
+                        <a href="afiliacion.html">Afiliación</a>
+                    </div>
+                </li>
+
+                <li class="dropdown-item">
+                    <a href="#">CONVENIOS</a>
+                    <div class="dropdown-menu">
+                        <a href="beneficios.html">Beneficios</a>
+                        <a href="convenios.html">Convenios</a>
+                    </div>
+                </li>
+
+                <li class="dropdown-item">
+                    <a href="#">CAPACITACIONES</a>
+                    <div class="dropdown-menu">
+                        <a href="cursos.html">Cursos</a>
+                        <a href="certificaciones.html">Certificaciones</a>
+                        <a href="eventos.html">Eventos</a>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- ===== HERO ===== -->
+    <section class="proveedores-hero">
+        <div class="hero-particles" id="particles"></div>
+        <div class="hero-content">
+            <div class="hero-badge">ALIADOS ESTRATÉGICOS</div>
+            <h1 class="hero-title">PADRÓN DE <span>PROVEEDORES</span></h1>
+            <p class="hero-subtitle">Empresas comprometidas con la excelencia y la innovación en la industria del concreto</p>
+        </div>
+    </section>
+
+    <!-- ===== SECCIÓN PRINCIPAL ===== -->
+    <section class="explore-section">
+        <div class="explore-container">
+
+            <div class="categories-mind-map" id="categoriasContainer"></div>
+
+            <div class="search-elegant">
+                <input type="text" id="buscador" placeholder="Buscar por nombre, ciudad o especialidad...">
+                <button id="btnBuscar"><i class="fas fa-arrow-right"></i></button>
+            </div>
+
+            <div class="results-counter-modern">
+                Mostrando <span id="resultadosCount">17</span> de <span id="totalCount">17</span> proveedores
+            </div>
+
+            <!-- GRID DE PROVEEDORES -->
+            <div class="proveedores-grid" id="proveedoresGrid"></div>
+
+            <!-- Botón limpiar filtros -->
+            <div class="clear-filters-container" id="btnLimpiarContainer" style="display: none;">
+                <button class="btn-clear-modern" id="btnLimpiarFiltros">
+                    <i class="fas fa-times-circle"></i> Limpiar filtros
+                </button>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="footer">
+        <div class="footer-content">
+
+            <!-- Columna 1 -->
+            <div class="footer-column footer-brand">
+                <img src="assets/img/logo/logoamci.png" alt="AMCI" class="footer-logo">
+
+                <p>
+                    Somos una Asociación Mexicana comprometida en promover la formalización de la industria concretera
+                    independiente
+                </p>
+
+                <div class="footer-social">
+                    <a href="https://www.facebook.com/mexicoenconcreto"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="https://www.instagram.com/amci.ac/"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://www.linkedin.com/company/asociaci%C3%B3n-mexicana-de-concreteros-independientes/"><i
+                            class="fa-brands fa-linkedin-in"></i></a>
+                    <a href="https://wa.me/5218118044452"><i class="fa-brands fa-whatsapp"></i></a>
+                </div>
+            </div>
+
+            <!-- Columna 2 -->
+            <div class="footer-column">
+                <h3>Navegación</h3>
+                <ul class="footer-links">
+                    <li><i class="fa-solid fa-angle-right"></i><a href="index.html">Inicio</a></li>
+                    <li><i class="fa-solid fa-angle-right"></i><a href="nosotros.html">AMCI</a></li>
+                    <li><i class="fa-solid fa-angle-right"></i><a href="#miembros">Miembros</a></li>
+                    <li><i class="fa-solid fa-angle-right"></i><a href="#convenios">Convenios</a></li>
+                    <li><i class="fa-solid fa-angle-right"></i><a href="#capacitaciones">Capacitación</a></li>
+                    <li><i class="fa-solid fa-angle-right"></i><a href="#blog">Blog</a></li>
+                    <li><i class="fa-solid fa-angle-right"></i><a href="#contacto">Contacto</a></li>
+                </ul>
+            </div>
+
+            <!-- Columna 3 -->
+            <div class="footer-column">
+                <h3>Contacto</h3>
+
+                <div class="footer-contact">
+
+                    <ul>
+                        <li><i class="fa-solid fa-location-dot"></i>
+                            <p><a href="https://maps.app.goo.gl/HgTsrKyP8JxzeWnP8">David Alfaro Siqueiros 106 – Suite
+                                    1700 P.17
+                                    Valle Oriente, 66269 San Pedro Garza García, N.L.</a>
+                            </p>
+                        </li>
+                        <li><i class="fa-solid fa-phone"></i>
+                            <p>Oficina: 81 4739 5426<br>
+                                Socios y proveedores: 81 1804 4452<br>
+                                Rel. gubernamentales y eventos: 81 1804 1943</p>
+                        </li>
+                        <li><i class="fa-solid fa-clock"></i>
+                            <p>Lun – Vie: 08:00 AM – 5:00 PM</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+            <p>© 2026 AMCI. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- ===== BOTÓN VOLVER ARRIBA ===== -->
+    <a href="#" id="globalScrollToTop" class="scroll-to-top"><i class="fa-solid fa-chevron-up"></i></a>
+
+    <!-- ===== SCRIPTS ===== -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="script.js"></script>
+    <script src="script/proveedores.js"></script>
+</body>
+</html>
