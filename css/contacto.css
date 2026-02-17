@@ -1,0 +1,436 @@
+/* ===== VARIABLES ===== */
+:root {
+    --primary: #0900b9;
+    --primary-light: #3a72f6;
+    --accent: #ffffff;
+    --dark: #1a1a2e;
+    --gray-100: #f8f9fc;
+    --gray-200: #e9ecef;
+    --gray-300: #dee2e6;
+    --gray-600: #6c757d;
+    --gray-700: #495057;
+    --gray-800: #343a40;
+    --success: #10b981;
+    --warning: #f59e0b;
+    --gradient-1: linear-gradient(135deg, var(--primary) 0%, #1a1a4e 100%);
+    --gradient-2: linear-gradient(145deg, #f8faff, white);
+    --shadow-sm: 0 10px 30px rgba(0, 0, 0, 0.03);
+    --shadow-md: 0 20px 40px rgba(9, 0, 185, 0.08);
+    --shadow-lg: 0 30px 60px rgba(9, 0, 185, 0.15);
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: var(--gray-100);
+    overflow-x: hidden;
+}
+
+/* ===== HERO ===== */
+.contacto-hero {
+    position: relative;
+    height: 50vh;
+    min-height: 400px;
+    background: #0d0f10;
+    display: flex;
+    align-items: center;
+    color: white;
+    overflow: hidden;
+}
+
+.contacto-hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 900px;
+    padding: 0 5%;
+}
+
+.hero-badge {
+    display: inline-block;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    padding: 8px 20px;
+    border-radius: 50px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.hero-title {
+    font-size: 6rem;
+    font-weight: 800;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+.hero-title span {
+    color: var(--primary-light);
+}
+
+.hero-subtitle {
+    font-size: 1.2rem;
+    max-width: 700px;
+    margin: 0 auto;
+    opacity: 0.9;
+}
+
+/* ===== SECCIÓN CONTACTO ===== */
+.contacto-section {
+    padding: 60px 5%;
+    background: white;
+}
+
+.contacto-container {
+    max-width: 1300px;
+    margin: 0 auto;
+}
+
+.contacto-grid {
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    gap: 40px;
+    margin-bottom: 60px;
+}
+
+/* Tarjeta de información principal */
+.info-principal {
+    background: var(--gradient-2);
+    border-radius: 30px;
+    padding: 40px;
+    box-shadow: var(--shadow-md);
+    border: 1px solid var(--gray-200);
+}
+
+.info-principal h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--gray-800);
+    margin-bottom: 10px;
+}
+
+.info-principal h2 span {
+    color: var(--primary);
+}
+
+.info-desc {
+    color: var(--gray-600);
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid var(--gray-200);
+}
+
+/* Bloques de contacto */
+.contacto-bloques {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.contacto-bloque {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+}
+
+.bloque-icon {
+    width: 50px;
+    height: 50px;
+    background: var(--primary);
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 1.3rem;
+    flex-shrink: 0;
+    box-shadow: 0 10px 20px rgba(9, 0, 185, 0.15);
+}
+
+.bloque-contenido h3 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--gray-800);
+    margin-bottom: 10px;
+}
+
+.bloque-contenido p {
+    color: var(--gray-600);
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin: 0 0 5px;
+}
+
+.bloque-contenido a {
+    color: var(--gray-600);
+    text-decoration: none;
+    transition: color 0.3s ease;
+    display: inline-block;
+}
+
+.bloque-contenido a:hover {
+    color: var(--primary);
+}
+
+/* Teléfonos específicos */
+.telefonos-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    margin-top: 5px;
+}
+
+.telefono-item {
+    background: white;
+    border-radius: 12px;
+    padding: 12px;
+    border: 1px solid var(--gray-200);
+    transition: all 0.3s ease;
+}
+
+.telefono-item:hover {
+    border-color: var(--primary-light);
+    box-shadow: var(--shadow-sm);
+}
+
+.telefono-item strong {
+    display: block;
+    color: var(--gray-700);
+    font-size: 0.8rem;
+    margin-bottom: 5px;
+}
+
+.telefono-item a {
+    color: var(--primary);
+    font-weight: 600;
+    font-size: 1rem;
+    text-decoration: none;
+}
+
+.telefono-item a:hover {
+    color: var(--primary-light);
+}
+
+/* Emails */
+.emails-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.email-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.email-item i {
+    color: var(--primary);
+    font-size: 0.9rem;
+    width: 20px;
+}
+
+.email-item a {
+    color: var(--gray-600);
+    text-decoration: none;
+    font-size: 0.95rem;
+    transition: color 0.3s ease;
+}
+
+.email-item a:hover {
+    color: var(--primary);
+}
+
+/* Mapa */
+.mapa-container {
+    background: var(--gradient-2);
+    border-radius: 30px;
+    padding: 30px;
+    box-shadow: var(--shadow-md);
+    border: 1px solid var(--gray-200);
+    height: fit-content;
+}
+
+.mapa-container h3 {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: var(--gray-800);
+    margin-bottom: 15px;
+}
+
+.mapa-placeholder {
+    width: 100%;
+    height: 300px;
+    background: #e9ecef;
+    border-radius: 20px;
+    overflow: hidden;
+    margin-bottom: 20px;
+    border: 1px solid var(--gray-200);
+}
+
+.mapa-placeholder iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+.direccion-detalle {
+    display: flex;
+    gap: 15px;
+    align-items: flex-start;
+}
+
+.direccion-detalle i {
+    color: var(--primary);
+    font-size: 1.2rem;
+    margin-top: 3px;
+}
+
+.direccion-detalle p {
+    color: var(--gray-600);
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin: 0;
+}
+
+.direccion-detalle a {
+    color: var(--gray-600);
+    text-decoration: none;
+}
+
+.direccion-detalle a:hover {
+    color: var(--primary);
+}
+
+/* Horario y redes */
+.info-extra {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    margin-top: 40px;
+    padding-top: 40px;
+    border-top: 1px solid var(--gray-200);
+}
+
+.horario-box,
+.redes-box {
+    background: var(--gradient-2);
+    border-radius: 20px;
+    padding: 25px;
+    border: 1px solid var(--gray-200);
+}
+
+.horario-box h3,
+.redes-box h3 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--gray-800);
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.horario-box i,
+.redes-box i {
+    color: var(--primary);
+}
+
+.horario-item {
+    display: flex;
+    justify-content: space-between;
+    color: var(--gray-600);
+    font-size: 0.95rem;
+    padding: 8px 0;
+    border-bottom: 1px dashed var(--gray-200);
+}
+
+.horario-item:last-child {
+    border-bottom: none;
+}
+
+.redes-grid {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.red-social {
+    width: 45px;
+    height: 45px;
+    background: var(--primary);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 1.3rem;
+    transition: all 0.3s ease;
+    border: 1px solid var(--gray-200);
+    text-decoration: none;
+}
+
+.red-social i {
+    color: white;
+}
+
+.red-social:hover {
+    transform: translateY(-3px);
+    border-color: transparent;
+}
+
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 992px) {
+    .contacto-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .hero-title {
+        font-size: 3rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-title {
+        font-size: 2.5rem;
+    }
+
+    .form-row {
+        grid-template-columns: 1fr;
+    }
+
+    .info-extra {
+        grid-template-columns: 1fr;
+    }
+
+    .telefonos-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .contacto-bloque {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-title {
+        font-size: 2rem;
+    }
+
+    .info-principal {
+        padding: 25px;
+    }
+}

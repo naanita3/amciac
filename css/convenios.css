@@ -1,0 +1,547 @@
+:root {
+    --primary: #0900b9;
+    --primary-light: #3a72f6;
+    --primary-dark: #07008f;
+    --accent: #ffffff;
+    --dark: #1a1a2e;
+    --gray-100: #f8f9fc;
+    --gray-200: #e9ecef;
+    --gray-300: #dee2e6;
+    --gray-600: #6c757d;
+    --gray-800: #343a40;
+    --success: #10b981;
+    --warning: #f59e0b;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: var(--gray-100);
+    overflow-x: hidden;
+}
+
+/* ===== HERO ===== */
+.convenios-hero {
+    position: relative;
+    height: 100vh;
+    min-height: 450px;
+    background: linear-gradient(135deg, #0b0c1e 0%, var(--primary) 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    overflow: hidden;
+}
+
+.convenios-hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('assets/img/fondos/fondo-stats.webp');
+    background-size: cover;
+    background-position: center;
+    opacity: 0.15;
+    z-index: 0;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 900px;
+    padding: 0 5%;
+}
+
+.hero-title {
+    font-size: 4rem;
+    font-weight: 800;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+.hero-title span {
+    color: #7cf5ff;
+    text-shadow: 0 0 15px rgba(124, 245, 255, 0.6);
+}
+
+.hero-subtitle {
+    font-size: 1.3rem;
+    max-width: 700px;
+    margin: 0 auto 30px;
+    opacity: 0.9;
+}
+
+.hero-btn {
+    display: inline-block;
+    padding: 15px 40px;
+    background: white;
+    color: var(--primary);
+    border-radius: 60px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+}
+
+.hero-btn:hover {
+    background: transparent;
+    color: white;
+    border-color: white;
+    transform: translateY(-3px);
+}
+
+/* ===== INTRO ===== */
+.intro-section {
+    padding: 60px 5%;
+    background: white;
+    text-align: center;
+}
+
+.intro-container {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.intro-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--gray-800);
+    margin-bottom: 20px;
+}
+
+.intro-title span {
+    color: var(--primary);
+}
+
+.intro-text {
+    font-size: 1.1rem;
+    color: var(--gray-600);
+    line-height: 1.8;
+}
+
+/* ===== BENEFICIOS DESTACADOS (TARJETAS GRANDES) ===== */
+.destacados-section {
+    padding: 40px 5% 60px;
+    background: var(--gray-100);
+}
+
+.destacados-grid {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+}
+
+.destacado-card {
+    background: white;
+    border-radius: 30px;
+    overflow: hidden;
+    box-shadow: 0 20px 40px rgba(9, 0, 185, 0.08);
+    transition: all 0.4s ease;
+    border: 1px solid var(--gray-200);
+    display: flex;
+    flex-direction: column;
+}
+
+.destacado-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 30px 60px rgba(9, 0, 185, 0.15);
+}
+
+.destacado-header {
+    padding: 30px 30px 20px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    border-bottom: 1px solid var(--gray-200);
+}
+
+.destacado-logo {
+    width: 80px;
+    height: 80px;
+    background: var(--gray-100);
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.5rem;
+    color: var(--primary);
+    border: 1px solid var(--gray-200);
+}
+
+.destacado-titulo h3 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--gray-800);
+    margin-bottom: 5px;
+}
+
+.destacado-titulo p {
+    color: var(--gray-600);
+    font-size: 0.95rem;
+}
+
+.destacado-body {
+    padding: 25px 30px;
+    flex-grow: 1;
+}
+
+.beneficio-principal {
+    background: linear-gradient(145deg, #f0f4ff, white);
+    border-left: 4px solid var(--primary);
+    padding: 20px;
+    border-radius: 16px;
+    margin-bottom: 20px;
+}
+
+.descuento {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: var(--primary);
+    line-height: 1;
+    margin-bottom: 5px;
+}
+
+.beneficio-desc {
+    font-size: 1.1rem;
+    color: var(--gray-600);
+}
+
+.beneficio-secundario {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: var(--gray-600);
+    margin-bottom: 12px;
+}
+
+.beneficio-secundario i {
+    color: var(--success);
+    font-size: 1.1rem;
+}
+
+.destacado-footer {
+    padding: 0 30px 30px;
+}
+
+.btn-destacado {
+    display: inline-block;
+    width: 100%;
+    padding: 14px;
+    background: var(--primary-light);
+    color: white;
+    border: none;
+    border-radius: 60px;
+    font-weight: 600;
+    text-align: center;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.btn-destacado:hover {
+    background: var(--primary);
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(9, 0, 185, 0.2);
+}
+
+/* ===== TABLA DE BENEFICIOS ADICIONALES ===== */
+.tabla-section {
+    padding: 40px 5% 60px;
+    background: white;
+}
+
+.tabla-container {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.tabla-titulo {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--gray-800);
+    margin-bottom: 40px;
+}
+
+.tabla-titulo span {
+    color: var(--primary);
+}
+
+.tabla-beneficios {
+    background: white;
+    border-radius: 30px;
+    overflow: hidden;
+    box-shadow: 0 20px 40px rgba(9, 0, 185, 0.05);
+    border: 1px solid var(--gray-200);
+}
+
+.tabla-row {
+    display: grid;
+    grid-template-columns: 2.5fr 1.5fr 1fr;
+    border-bottom: 1px solid var(--gray-200);
+}
+
+.tabla-row:last-child {
+    border-bottom: none;
+}
+
+.tabla-header {
+    background: var(--primary);
+    color: white;
+    font-weight: 600;
+    padding: 18px 25px;
+    font-size: 1.1rem;
+}
+
+.tabla-item {
+    padding: 18px 25px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: var(--gray-600);
+}
+
+.tabla-item i {
+    color: var(--success);
+    font-size: 1.2rem;
+    min-width: 24px;
+}
+
+.tabla-item strong {
+    color: var(--gray-800);
+}
+
+.badge-gratis {
+    background: var(--success);
+    color: white;
+    padding: 4px 12px;
+    border-radius: 50px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    margin-left: 10px;
+}
+
+.badge-dcto {
+    background: var(--warning);
+    color: var(--gray-800);
+    padding: 4px 12px;
+    border-radius: 50px;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+@media (max-width: 768px) {
+    .tabla-row {
+        grid-template-columns: 1fr;
+        border-bottom: 2px solid var(--gray-300);
+    }
+
+    .tabla-header {
+        display: none;
+    }
+
+    .tabla-item {
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        padding: 15px 20px;
+        border-bottom: 1px dashed var(--gray-200);
+    }
+
+    .tabla-item:before {
+        content: attr(data-label);
+        font-weight: 600;
+        color: var(--gray-800);
+    }
+}
+
+/* ===== CARRUSEL DE ALIADOS ===== */
+.aliados-section {
+    padding: 60px 5%;
+    background: var(--gray-100);
+    text-align: center;
+}
+
+.aliados-titulo {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--gray-800);
+    margin-bottom: 40px;
+}
+
+.aliados-titulo span {
+    color: var(--primary);
+}
+
+.aliados-carrusel {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+
+.aliados-carrusel .swiper-slide {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 120px;
+    background: white;
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow: 0 10px 30px rgba(9, 0, 185, 0.05);
+    border: 1px solid var(--gray-200);
+}
+
+.aliados-carrusel .swiper-slide img {
+    max-width: 100%;
+    max-height: 80px;
+    filter: grayscale(100%);
+    opacity: 0.7;
+    transition: all 0.3s ease;
+}
+
+.aliados-carrusel .swiper-slide:hover img {
+    filter: grayscale(0);
+    opacity: 1;
+}
+
+/* ===== CÓMO ACCEDER ===== */
+.acceso-section {
+    padding: 60px 5%;
+    background: linear-gradient(145deg, white, var(--gray-100));
+}
+
+.acceso-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.acceso-title {
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: var(--gray-800);
+    margin-bottom: 50px;
+}
+
+.acceso-title span {
+    color: var(--primary);
+}
+
+.acceso-steps {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+}
+
+.acceso-step {
+    background: white;
+    padding: 40px 30px;
+    border-radius: 30px;
+    box-shadow: 0 20px 40px rgba(9, 0, 185, 0.05);
+}
+
+.step-number {
+    width: 60px;
+    height: 60px;
+    background: var(--primary-light);
+    color: white;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin: 0 auto 25px;
+}
+
+.acceso-step h3 {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: var(--gray-800);
+    margin-bottom: 15px;
+}
+
+.acceso-step p {
+    color: var(--gray-600);
+    line-height: 1.6;
+}
+
+/* ===== BANNER AFILIATE ===== */
+.afiliate-banner {
+    padding: 80px 5%;
+    background: #020024;
+    background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(9, 9, 121, 1) 74%, rgba(0, 116, 173, 1) 97%);
+    color: white;
+    text-align: center;
+}
+
+.afiliate-banner h2 {
+    font-size: 2.5rem;
+    font-weight: 800;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+.afiliate-banner p {
+    font-size: 1.2rem;
+    margin-bottom: 40px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.btn-afiliate {
+    background-color: var(--primary-light);
+    font-size: 1.1rem;
+    padding: 18px 50px;
+    color: white;
+    text-decoration: none;
+    border-radius: 60px;
+    font-weight: 600;
+    display: inline-block;
+    transition: all 0.3s ease;
+}
+
+.btn-afiliate:hover {
+    background-color: var(--primary);
+    transform: translateY(-3px);
+    box-shadow: 0 15px 30px rgba(9, 0, 185, 0.3);
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 992px) {
+    .destacados-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .acceso-steps {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-title {
+        font-size: 3rem;
+    }
+
+    .acceso-steps {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-title {
+        font-size: 2.2rem;
+    }
+
+    .destacado-header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .descuento{
+        font-size: 1.5rem;
+    }
+}

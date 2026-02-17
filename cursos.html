@@ -4,12 +4,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>Proveedores - AMCI</title>
+    <title>Cursos - AMCI</title>
     <link rel="shortcut icon" href="assets/img/logo/favicon.png">
 
     <!-- ICONS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <!-- Fuente Poppins + Inter -->
+    <!-- Fuente Poppins -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
@@ -19,7 +19,7 @@
     <!-- CSS Global -->
     <link rel="stylesheet" href="styles.css">
     <!-- CSS Específico -->
-    <link rel="stylesheet" href="css/proveedores.css">
+    <link rel="stylesheet" href="css/cursos.css">
 </head>
 
 <body>
@@ -50,7 +50,7 @@
             <div class="close-menu" id="closeMenu">×</div>
 
             <ul>
-                <li><a href="index.html">INICIO</a></li>
+                <li><a href="#inicio">INICIO</a></li>
 
                 <li class="dropdown-item">
                     <a href="#">AMCI</a>
@@ -92,47 +92,87 @@
             </ul>
         </nav>
     </header>
-
     <!-- ===== HERO ===== -->
-    <section class="proveedores-hero">
-        <div class="hero-particles" id="particles"></div>
-        <div class="hero-content">
-            <div class="hero-badge">ALIADOS ESTRATÉGICOS</div>
-            <h1 class="hero-title">PADRÓN DE <span>PROVEEDORES</span></h1>
-            <p class="hero-subtitle">Empresas comprometidas con la excelencia y la innovación en la industria del
-                concreto</p>
+    <section class="cursos-hero">
+        <div class="hero-content" data-aos="fade-up">
+            <h1 class="hero-title">CATÁLOGO DE CURSOS</h1>
+            <p class="hero-subtitle">Programas de capacitación para el fortalecimiento técnico, operativo y estratégico
+                de la industria del concreto</p>
         </div>
     </section>
 
-    <!-- ===== SECCIÓN PRINCIPAL ===== -->
-    <section class="explore-section">
-        <div class="explore-container">
+    <!-- ===== INTRO ===== -->
+    <section class="intro-section">
+        <div class="intro-container" data-aos="fade-up">
+            <p class="intro-text">
+                El presente catálogo integra los programas de capacitación orientados al fortalecimiento técnico,
+                operativo, administrativo y estratégico de los profesionales de la industria del concreto. Los cursos se
+                imparten en modalidad presencial, en línea e híbrida, y están dirigidos a ingenieros, técnicos,
+                supervisores, laboratoristas, gerentes y personal operativo del sector.
+            </p>
+            <div class="modalidades-grid">
+                <div class="modalidad-item">
+                    <i class="fas fa-building"></i>
+                    <span>Presencial</span>
+                </div>
+                <div class="modalidad-item">
+                    <i class="fas fa-laptop"></i>
+                    <span>En línea</span>
+                </div>
+                <div class="modalidad-item">
+                    <i class="fas fa-object-group"></i>
+                    <span>Híbrido</span>
+                </div>
+            </div>
+        </div>
+    </section>
 
-            <div class="categories-mind-map" id="categoriasContainer"></div>
+    <!-- ===== FILTROS ===== -->
+    <section class="filtros-section">
+        <div class="filtros-container">
+            <div class="search-wrapper">
+                <input type="text" id="buscador" class="search-input"
+                    placeholder="Buscar curso por nombre o descripción...">
+                <button class="search-btn" id="btnBuscar"><i class="fas fa-search"></i></button>
+            </div>
+            <select id="modalidadFilter" class="filter-select">
+                <option value="">Todas las modalidades</option>
+                <option value="Presencial">Presencial</option>
+                <option value="En línea">En línea</option>
+                <option value="Híbrido">Híbrido</option>
+            </select>
+        </div>
+        <div class="results-counter">
+            Mostrando <span id="resultadosCount">29</span> cursos
+        </div>
+    </section>
 
-            <div class="search-elegant">
-                <input type="text" id="buscador" placeholder="Buscar por nombre, ciudad o especialidad...">
-                <button id="btnBuscar"><i class="fas fa-arrow-right"></i></button>
+    <!-- ===== GRID DE CURSOS ===== -->
+    <section class="cursos-section">
+        <div class="cursos-container">
+            <div class="cursos-grid" id="cursosGrid">
+                <!-- Se carga dinámicamente con JS -->
             </div>
 
-            <div class="results-counter-modern">
-                Mostrando <span id="resultadosCount">17</span> de <span id="totalCount">17</span> proveedores
-            </div>
-
-            <!-- GRID DE PROVEEDORES -->
-            <div class="proveedores-grid" id="proveedoresGrid"></div>
-
-            <!-- Botón limpiar filtros -->
-            <div class="clear-filters-container" id="btnLimpiarContainer" style="display: none;">
-                <button class="btn-clear-modern" id="btnLimpiarFiltros">
+            <!-- Botón limpiar filtros (oculto inicialmente) -->
+            <div style="text-align: center; margin-top: 40px; display: none;" id="btnLimpiarContainer">
+                <button class="btn-clear" id="btnLimpiarFiltros">
                     <i class="fas fa-times-circle"></i> Limpiar filtros
                 </button>
             </div>
-
         </div>
     </section>
 
-    <!-- ===== FOOTER ===== -->
+    <!-- ===== CTA ===== -->
+    <section class="cta-section">
+        <div class="cta-container" data-aos="zoom-in">
+            <h2 class="cta-title">¿LISTO PARA <span>CAPACITARTE</span>?</h2>
+            <p class="cta-text">Contáctanos para más información sobre fechas, costos e inscripciones</p>
+            <a href="afiliacion.html" class="btn-cta">SOLICITAR INFORMACIÓN</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
     <footer class="footer">
         <div class="footer-content">
 
@@ -206,7 +246,7 @@
     <!-- ===== SCRIPTS ===== -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="script.js"></script>
-    <script src="script/proveedores.js"></script>
+    <script src="script/cursos.js"></script>
 </body>
 
 </html>

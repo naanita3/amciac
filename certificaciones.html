@@ -4,22 +4,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>Proveedores - AMCI</title>
+    <title>Certificaciones - AMCI</title>
     <link rel="shortcut icon" href="assets/img/logo/favicon.png">
 
     <!-- ICONS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <!-- Fuente Poppins + Inter -->
+    <!-- Fuente Poppins -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <!-- Animate on Scroll -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <!-- CSS Global -->
     <link rel="stylesheet" href="styles.css">
     <!-- CSS Específico -->
-    <link rel="stylesheet" href="css/proveedores.css">
+    <link rel="stylesheet" href="css/certificaciones.css">
 </head>
 
 <body>
@@ -50,7 +49,7 @@
             <div class="close-menu" id="closeMenu">×</div>
 
             <ul>
-                <li><a href="index.html">INICIO</a></li>
+                <li><a href="#inicio">INICIO</a></li>
 
                 <li class="dropdown-item">
                     <a href="#">AMCI</a>
@@ -92,47 +91,74 @@
             </ul>
         </nav>
     </header>
-
     <!-- ===== HERO ===== -->
-    <section class="proveedores-hero">
-        <div class="hero-particles" id="particles"></div>
-        <div class="hero-content">
-            <div class="hero-badge">ALIADOS ESTRATÉGICOS</div>
-            <h1 class="hero-title">PADRÓN DE <span>PROVEEDORES</span></h1>
-            <p class="hero-subtitle">Empresas comprometidas con la excelencia y la innovación en la industria del
-                concreto</p>
+    <section class="certificaciones-hero">
+        <div class="hero-content" data-aos="fade-up">
+            <h1 class="hero-title">CERTIFICACIONES</h1>
+            <p class="hero-subtitle">Respaldadas por IMCYC, OCEPER y ACI Validez nacional e internacional</p>
         </div>
     </section>
 
-    <!-- ===== SECCIÓN PRINCIPAL ===== -->
-    <section class="explore-section">
-        <div class="explore-container">
-
-            <div class="categories-mind-map" id="categoriasContainer"></div>
-
-            <div class="search-elegant">
-                <input type="text" id="buscador" placeholder="Buscar por nombre, ciudad o especialidad...">
-                <button id="btnBuscar"><i class="fas fa-arrow-right"></i></button>
+    <!-- ===== INTRO ===== -->
+    <section class="intro-section">
+        <div class="intro-container" data-aos="fade-up">
+            <div class="highlight-box">
+                <p>
+                    <strong>AMCI</strong> ofrece acceso a certificaciones oficiales con validez nacional a través del 
+                    <strong>IMCYC</strong> y <strong>OCEPER</strong>, así como certificaciones con validez internacional mediante 
+                    <strong>ACI</strong>. Los <strong>afiliados Premium</strong> obtienen un <strong>20% de descuento</strong> 
+                    en todas las certificaciones <span class="badge-premium">20% OFF</span>
+                </p>
             </div>
-
-            <div class="results-counter-modern">
-                Mostrando <span id="resultadosCount">17</span> de <span id="totalCount">17</span> proveedores
-            </div>
-
-            <!-- GRID DE PROVEEDORES -->
-            <div class="proveedores-grid" id="proveedoresGrid"></div>
-
-            <!-- Botón limpiar filtros -->
-            <div class="clear-filters-container" id="btnLimpiarContainer" style="display: none;">
-                <button class="btn-clear-modern" id="btnLimpiarFiltros">
-                    <i class="fas fa-times-circle"></i> Limpiar filtros
-                </button>
-            </div>
-
         </div>
     </section>
 
-    <!-- ===== FOOTER ===== -->
+    <!-- ===== FILTROS ===== -->
+    <section class="filtros-section">
+        <div class="filtros-container">
+            <div class="search-wrapper">
+                <input type="text" id="buscador" class="search-input" placeholder="Buscar certificación...">
+                <button class="search-btn" id="btnBuscar"><i class="fas fa-search"></i></button>
+            </div>
+            <select id="orgFilter" class="filter-select">
+                <option value="">Todas las organizaciones</option>
+                <option value="IMCYC">IMCYC - OCEPER</option>
+                <option value="ACI">ACI (Internacional)</option>
+                <option value="VALOR">Valor Agregado IMCYC</option>
+            </select>
+        </div>
+        <div class="results-counter">
+            Mostrando <span id="resultadosCount">21</span> certificaciones
+        </div>
+    </section>
+
+    <!-- ===== CERTIFICACIONES ===== -->
+    <section class="certificaciones-section">
+        <div class="certificaciones-container" id="certificacionesContainer">
+            <!-- Se carga dinámicamente con JS -->
+        </div>
+    </section>
+
+    <!-- ===== VALOR AGREGADO IMCYC ===== -->
+    <section class="valor-section">
+        <div class="valor-container">
+            <h2 class="valor-titulo" data-aos="fade-up">VALOR <span>AGREGADO</span> IMCYC</h2>
+            <div class="valor-grid" id="valorGrid">
+                <!-- Se carga dinámicamente con JS -->
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== CTA ===== -->
+    <section class="cta-section">
+        <div class="cta-container" data-aos="zoom-in">
+            <h2 class="cta-title">¿LISTO PARA <span>CERTIFICARTE</span>?</h2>
+            <p class="cta-text">Contáctanos para más información sobre fechas, costos y procesos de inscripción</p>
+            <a href="afiliacion.html" class="btn-cta">SOLICITAR INFORMACIÓN</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
     <footer class="footer">
         <div class="footer-content">
 
@@ -206,7 +232,6 @@
     <!-- ===== SCRIPTS ===== -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="script.js"></script>
-    <script src="script/proveedores.js"></script>
+    <script src="script/certificaciones.js"></script>
 </body>
-
 </html>

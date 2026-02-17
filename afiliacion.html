@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Afiliación - AMCI</title>
+    <link rel="shortcut icon" href="assets/img/logo/favicon.png">
+
+    <!-- ICONS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- Fuente Poppins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <!-- Animate on Scroll -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- CSS Global -->
+    <link rel="stylesheet" href="styles.css">
+    <!-- CSS Específico -->
+    <link rel="stylesheet" href="css/afiliacion.css">
+</head>
+
+<body>
+
+    <div id="page-loader">
+        <div class="loader-content">
+            <img src="assets/img/logo/logoamci.png" alt="AMCI">
+            <span>Cargando...</span>
+        </div>
+    </div>
+
+    <div id="cookie-banner">
+        <p>
+            Utilizamos cookies para mejorar tu experiencia.
+            <a href="#">Ver política</a>
+        </p>
+        <button id="accept-cookies">Aceptar</button>
+    </div>
+
+    <header>
+        <div class="logo">
+            <img src="assets/img/logo/logoamci.png" alt="AMCI">
+        </div>
+
+        <div class="menu-toggle" id="menuToggle">☰</div>
+
+        <nav id="mainNav" class="indexnav">
+            <div class="close-menu" id="closeMenu">×</div>
+
+            <ul>
+                <li><a href="index.html">INICIO</a></li>
+
+                <li class="dropdown-item">
+                    <a href="#">AMCI</a>
+                    <div class="dropdown-menu">
+                        <a href="nosotros.html">Sobre Nosotros</a>
+                        <a href="mesa-directiva.html">Mesa Directiva</a>
+                        <a href="eventos.html">Eventos</a>
+                        <a href="amci-store.html">AMCISTORE</a>
+                    </div>
+                </li>
+
+                <li class="dropdown-item">
+                    <a href="#">MIEMBROS</a>
+                    <div class="dropdown-menu">
+                        <a href="proveedores.html">
+                            <p>Padrón de Proveedores</p>
+                        </a>
+                        <a href="socios.html">Socios</a>
+                        <a href="afiliacion.html">Afiliación</a>
+                    </div>
+                </li>
+
+                <li class="dropdown-item">
+                    <a href="#">CONVENIOS</a>
+                    <div class="dropdown-menu">
+                        <a href="beneficios.html">Beneficios</a>
+                        <a href="convenios.html">Convenios</a>
+                    </div>
+                </li>
+
+                <li class="dropdown-item">
+                    <a href="#">CAPACITACIONES</a>
+                    <div class="dropdown-menu">
+                        <a href="cursos.html">Cursos</a>
+                        <a href="certificaciones.html">Certificaciones</a>
+                        <a href="eventos.html">Eventos</a>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- ===== HERO ===== -->
+    <section class="afiliacion-hero">
+        <div class="hero-content" data-aos="fade-up">
+            <h1 class="hero-title">ÚNETE A <span>AMCI</span></h1>
+            <p class="hero-subtitle">Forma parte de la red más importante de concreteros y proveedores de la industria
+                en México</p>
+            <a href="#formulario" class="hero-btn">SOLICITAR INFORMACIÓN</a>
+        </div>
+    </section>
+
+    <!-- ===== INTRO ===== -->
+    <section class="intro-section">
+        <div class="intro-container" data-aos="fade-up">
+            <h2 class="intro-title">¿POR QUÉ <span>AFILIARTE</span>?</h2>
+            <p class="intro-text">
+                En AMCI reunimos a los actores más importantes de la industria del concreto independiente en México.
+                Ser parte de nuestra asociación te brinda representación, capacitación, networking y beneficios
+                exclusivos
+                que impulsarán el crecimiento de tu empresa.
+            </p>
+            <div class="intro-stats">
+                <div class="stat-item">
+                    <span class="stat-number">+20</span>
+                    <span class="stat-label">Años de experiencia</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">+150</span>
+                    <span class="stat-label">Empresas afiliadas</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">22</span>
+                    <span class="stat-label">Estados de cobertura</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== TARJETAS DE AFILIACIÓN ===== -->
+    <section class="cards-section">
+        <div class="cards-container">
+            <!-- Tarjeta Socio Concretero -->
+            <div class="afiliacion-card" data-aos="fade-right">
+                <div class="card-header">
+                    <div class="card-icon">
+                        <i class="fas fa-hard-hat"></i>
+                    </div>
+                    <h3 class="card-title">SOCIO CONCRETERO</h3>
+                    <p class="card-subtitle">Para productores de concreto</p>
+                </div>
+                <div class="card-body">
+                    <ul class="feature-list">
+                        <li class="feature-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Representación y defensa de intereses</span>
+                        </li>
+                        <li class="feature-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Ficha de contacto en sitio web AMCI</span>
+                        </li>
+                        <li class="feature-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Precios preferenciales en eventos regionales</span>
+                        </li>
+                        <li class="feature-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Inscripción gratuita a cursos AMCI</span>
+                        </li>
+                        <li class="feature-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Plataforma de compra-venta de maquinaria</span>
+                        </li>
+                        <li class="feature-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Acceso a juntas regionales y congresos</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="card-footer">
+                    <span class="badge-info">Conoce todos los beneficios en <a href="beneficios.html">¡AQUÍ!</a></span>
+                    <button class="btn-card" onclick="selectTipo('concretero')">ME INTERESA</button>
+                </div>
+            </div>
+
+            <!-- Tarjeta Socio Proveedor -->
+            <div class="afiliacion-card" data-aos="fade-left">
+                <div class="card-header">
+                    <div class="card-icon">
+                        <i class="fas fa-handshake"></i>
+                    </div>
+                    <h3 class="card-title">SOCIO PROVEEDOR</h3>
+                    <p class="card-subtitle">Para aliados estratégicos</p>
+                </div>
+                <div class="card-body">
+                    <ul class="feature-list">
+                        <li class="feature-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Difusión directa con +3,000 contactos</span>
+                        </li>
+                        <li class="feature-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Publicación en revista México en Concreto</span>
+                        </li>
+                        <li class="feature-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Ficha de contacto en sitio web AMCI</span>
+                        </li>
+                        <li class="feature-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Webinars en colaboración</span>
+                        </li>
+                        <li class="feature-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Acceso a World of Concrete Las Vegas</span>
+                        </li>
+                        <li class="feature-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Descuento en CONEXPO-CON/AGG</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="card-footer">
+                    <span class="badge-info">Conoce todos los beneficios <a href="beneficios.html">¡AQUÍ!</a></span>
+                    <button class="btn-card" onclick="selectTipo('proveedor')">ME INTERESA</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== PREGUNTAS FRECUENTES ===== -->
+    <section class="faq-section">
+        <div class="faq-container">
+            <h2 class="section-title" data-aos="fade-up">PREGUNTAS <span>FRECUENTES</span></h2>
+
+            <div class="faq-item" data-aos="fade-up">
+                <div class="faq-question">
+                    ¿Cuáles son los requisitos para afiliarse?
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    Ser una empresa legalmente constituida en México, dedicada a la producción de concreto o proveeduría
+                    para la industria, y compartir los valores de AMCI de colaboración, ética y desarrollo profesional.
+                </div>
+            </div>
+
+            <div class="faq-item" data-aos="fade-up" data-aos-delay="50">
+                <div class="faq-question">
+                    ¿Cómo puedo conocer los costos de afiliación?
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    Los montos de inversión varían según el tipo de afiliación. Te invitamos a completar el formulario y
+                    uno de nuestros asesores te contactará con toda la información detallada.
+                </div>
+            </div>
+
+            <div class="faq-item" data-aos="fade-up" data-aos-delay="100">
+                <div class="faq-question">
+                    ¿Qué incluye exactamente cada tipo de afiliación?
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    Hemos creado una página especial con todos los beneficios detallados. Visita nuestra sección de <a
+                        href="beneficios.html" style="color: var(--primary);">beneficios</a> para conocer la lista
+                    completa de ventajas de cada tipo de socio.
+                </div>
+            </div>
+
+            <div class="faq-item" data-aos="fade-up" data-aos-delay="150">
+                <div class="faq-question">
+                    ¿Puedo cambiar de tipo de afiliación después?
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    Sí, los socios pueden migrar entre categorías al momento de su renovación anual, ajustando su
+                    inversión y beneficios.
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== dscto web ===== -->
+    <section class="afiliate-banner" id="afiliate">
+        <h2 data-aos="zoom-in">¡Afíliate en línea y obtén <span>10% de descuento</span>!</h2>
+        <p data-aos="zoom-in">Registra tu concretera a través de nuestra página web y accede a todos los beneficios
+            <b>AMCI</b> con un
+            descuento
+            exclusivo.
+        </p>
+        <a href="#formulario" class="btn btn-afiliate" data-aos="zoom-in">QUIERO LOS
+            BENEFICIOS</a>
+    </section>
+
+    <!-- ===== FORMULARIO MULTIPASO ===== -->
+    <section class="form-section" id="formulario">
+        <div class="form-container" data-aos="zoom-in">
+            <div class="form-header">
+                <h3>SOLICITUD DE INFORMACIÓN</h3>
+                <p>Completa los siguientes pasos y te contactaremos a la brevedad</p>
+            </div>
+
+            <!-- Barra de progreso -->
+            <div class="progress-bar">
+                <div class="progress-step active" id="step1-indicator">
+                    <div class="step-number">1</div>
+                    <span>Tipo de interés</span>
+                </div>
+                <div class="progress-step" id="step2-indicator">
+                    <div class="step-number">2</div>
+                    <span>Datos de contacto</span>
+                </div>
+                <div class="progress-step" id="step3-indicator">
+                    <div class="step-number">3</div>
+                    <span>Información adicional</span>
+                </div>
+            </div>
+
+            <!-- Paso 1: Tipo de interés -->
+            <div class="form-step active" id="step1">
+                <form id="formStep1">
+                    <div class="form-group">
+                        <label class="form-label">¿Qué tipo de afiliación te interesa?</label>
+                        <div class="radio-group">
+                            <label class="radio-option">
+                                <input type="radio" name="tipo" value="concretero" required>
+                                <span>Socio Concretero</span>
+                            </label>
+                            <label class="radio-option">
+                                <input type="radio" name="tipo" value="proveedor" required>
+                                <span>Socio Proveedor</span>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="form-actions">
+                        <button type="button" class="btn-next" onclick="nextStep(1)">Siguiente <i
+                                class="fas fa-arrow-right"></i></button>
+                    </div>
+                </form>
+            </div>
+
+            <!-- Paso 2: Datos de contacto -->
+            <div class="form-step" id="step2">
+                <form id="formStep2">
+                    <div class="form-group">
+                        <label class="form-label">Nombre completo</label>
+                        <input type="text" class="form-input" id="nombre" required>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Empresa</label>
+                        <input type="text" class="form-input" id="empresa" required>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Correo electrónico</label>
+                        <input type="email" class="form-input" id="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Teléfono</label>
+                        <input type="tel" class="form-input" id="telefono" required>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Estado de la república</label>
+                        <select class="form-select" id="estado" required>
+                            <option value="">Selecciona un estado</option>
+                            <option value="Aguascalientes">Aguascalientes</option>
+                            <option value="Baja California">Baja California</option>
+                            <option value="Baja California Sur">Baja California Sur</option>
+                            <option value="Campeche">Campeche</option>
+                            <option value="Chiapas">Chiapas</option>
+                            <option value="Chihuahua">Chihuahua</option>
+                            <option value="Ciudad de México">Ciudad de México</option>
+                            <option value="Coahuila">Coahuila</option>
+                            <option value="Colima">Colima</option>
+                            <option value="Durango">Durango</option>
+                            <option value="Estado de México">Estado de México</option>
+                            <option value="Guanajuato">Guanajuato</option>
+                            <option value="Guerrero">Guerrero</option>
+                            <option value="Hidalgo">Hidalgo</option>
+                            <option value="Jalisco">Jalisco</option>
+                            <option value="Michoacán">Michoacán</option>
+                            <option value="Morelos">Morelos</option>
+                            <option value="Nayarit">Nayarit</option>
+                            <option value="Nuevo León">Nuevo León</option>
+                            <option value="Oaxaca">Oaxaca</option>
+                            <option value="Puebla">Puebla</option>
+                            <option value="Querétaro">Querétaro</option>
+                            <option value="Quintana Roo">Quintana Roo</option>
+                            <option value="San Luis Potosí">San Luis Potosí</option>
+                            <option value="Sinaloa">Sinaloa</option>
+                            <option value="Sonora">Sonora</option>
+                            <option value="Tabasco">Tabasco</option>
+                            <option value="Tamaulipas">Tamaulipas</option>
+                            <option value="Tlaxcala">Tlaxcala</option>
+                            <option value="Veracruz">Veracruz</option>
+                            <option value="Yucatán">Yucatán</option>
+                            <option value="Zacatecas">Zacatecas</option>
+                        </select>
+                    </div>
+                    <div class="form-actions">
+                        <button type="button" class="btn-prev" onclick="prevStep(2)"><i class="fas fa-arrow-left"></i>
+                            Anterior</button>
+                        <button type="button" class="btn-next" onclick="nextStep(2)">Siguiente <i
+                                class="fas fa-arrow-right"></i></button>
+                    </div>
+                </form>
+            </div>
+
+            <!-- Paso 3: Información adicional -->
+            <div class="form-step" id="step3">
+                <form id="formStep3">
+                    <div class="form-group">
+                        <label class="form-label">¿Cómo te gustaría que te contactemos?</label>
+                        <div class="radio-group">
+                            <label class="radio-option">
+                                <input type="radio" name="contacto" value="email" checked>
+                                <span>Correo electrónico</span>
+                            </label>
+                            <label class="radio-option">
+                                <input type="radio" name="contacto" value="whatsapp">
+                                <span>WhatsApp</span>
+                            </label>
+                            <label class="radio-option">
+                                <input type="radio" name="contacto" value="telefono">
+                                <span>Teléfono</span>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Mensaje o comentarios adicionales</label>
+                        <textarea class="form-textarea" id="mensaje" rows="4"
+                            placeholder="¿Alguna duda específica?"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label class="checkbox-option">
+                            <input type="checkbox" id="aviso" required>
+                            <span>Acepto el aviso de privacidad y que me contacten</span>
+                        </label>
+                    </div>
+                    <div class="form-actions">
+                        <button type="button" class="btn-prev" onclick="prevStep(3)"><i class="fas fa-arrow-left"></i>
+                            Anterior</button>
+                        <button type="button" class="btn-submit" onclick="submitForm()" id="submitBtn">Enviar
+                            solicitud</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+
+            <!-- Columna 1 -->
+            <div class="footer-column footer-brand">
+                <img src="assets/img/logo/logoamci.png" alt="AMCI" class="footer-logo">
+
+                <p>
+                    Somos una Asociación Mexicana comprometida en promover la formalización de la industria concretera
+                    independiente
+                </p>
+
+                <div class="footer-social">
+                    <a href="https://www.facebook.com/mexicoenconcreto"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="https://www.instagram.com/amci.ac/"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://www.linkedin.com/company/asociaci%C3%B3n-mexicana-de-concreteros-independientes/"><i
+                            class="fa-brands fa-linkedin-in"></i></a>
+                    <a href="https://wa.me/5218118044452"><i class="fa-brands fa-whatsapp"></i></a>
+                </div>
+            </div>
+
+            <!-- Columna 2 -->
+            <div class="footer-column">
+                <h3>Navegación</h3>
+                <ul class="footer-links">
+                    <li><i class="fa-solid fa-angle-right"></i><a href="index.html">Inicio</a></li>
+                    <li><i class="fa-solid fa-angle-right"></i><a href="nosotros.html">AMCI</a></li>
+                    <li><i class="fa-solid fa-angle-right"></i><a href="socios.html">Miembros</a></li>
+                    <li><i class="fa-solid fa-angle-right"></i><a href="convenios.html">Convenios</a></li>
+                    <li><i class="fa-solid fa-angle-right"></i><a href="cusos.html">Capacitación</a></li>
+                    <li><i class="fa-solid fa-angle-right"></i><a href="#blog">Blog</a></li>
+                    <li><i class="fa-solid fa-angle-right"></i><a href="contacto.html">Contacto</a></li>
+                </ul>
+            </div>
+
+            <!-- Columna 3 -->
+            <div class="footer-column">
+                <h3>Contacto</h3>
+
+                <div class="footer-contact">
+
+                    <ul>
+                        <li><i class="fa-solid fa-location-dot"></i>
+                            <p><a href="https://maps.app.goo.gl/HgTsrKyP8JxzeWnP8">David Alfaro Siqueiros 106 – Suite
+                                    1700 P.17
+                                    Valle Oriente, 66269 San Pedro Garza García, N.L.</a>
+                            </p>
+                        </li>
+                        <li><i class="fa-solid fa-phone"></i>
+                            <p>Oficina: 81 4739 5426<br>
+                                Socios y proveedores: 81 1804 4452<br>
+                                Rel. gubernamentales y eventos: 81 1804 1943</p>
+                        </li>
+                        <li><i class="fa-solid fa-clock"></i>
+                            <p>Lun – Vie: 08:00 AM – 5:00 PM</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+            <p>© 2026 AMCI. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- ===== BOTÓN VOLVER ARRIBA ===== -->
+    <a href="#" id="globalScrollToTop" class="scroll-to-top"><i class="fa-solid fa-chevron-up"></i></a>
+
+    <!-- ===== SCRIPTS ===== -->
+    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+    <script>
+        (function () {
+            emailjs.init("cUOH_KV2ZMrGf7_YT");
+        })();
+    </script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="script.js"></script>
+    <script src="script/afiliacion.js"></script>
+</body>
+
+</html>

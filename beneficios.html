@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Beneficios AMCI - Socios Concreteros y Proveedores</title>
+    <link rel="shortcut icon" href="assets/img/logo/favicon.png">
+
+    <!-- ICONS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- Fuente Poppins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <!-- Animate on Scroll -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- CSS Global -->
+    <link rel="stylesheet" href="styles.css">
+    <!-- CSS Específico para Beneficios -->
+    <link rel="stylesheet" href="css/beneficios.css">
+</head>
+
+<body>
+
+    <div id="page-loader">
+        <div class="loader-content">
+            <img src="assets/img/logo/logoamci.png" alt="AMCI">
+            <span>Cargando...</span>
+        </div>
+    </div>
+
+    <div id="cookie-banner">
+        <p>
+            Utilizamos cookies para mejorar tu experiencia.
+            <a href="#">Ver política</a>
+        </p>
+        <button id="accept-cookies">Aceptar</button>
+    </div>
+
+    <header>
+        <div class="logo">
+            <img src="assets/img/logo/logoamci.png" alt="AMCI">
+        </div>
+
+        <div class="menu-toggle" id="menuToggle">☰</div>
+
+        <nav id="mainNav" class="indexnav">
+            <div class="close-menu" id="closeMenu">×</div>
+
+            <ul>
+                <li><a href="index.html">INICIO</a></li>
+
+                <li class="dropdown-item">
+                    <a href="#">AMCI</a>
+                    <div class="dropdown-menu">
+                        <a href="nosotros.html">Sobre Nosotros</a>
+                        <a href="mesa-directiva.html">Mesa Directiva</a>
+                        <a href="eventos.html">Eventos</a>
+                        <a href="amci-store.html">AMCISTORE</a>
+                    </div>
+                </li>
+
+                <li class="dropdown-item">
+                    <a href="#">MIEMBROS</a>
+                    <div class="dropdown-menu">
+                        <a href="proveedores.html">
+                            <p>Padrón de Proveedores</p>
+                        </a>
+                        <a href="socios.html">Socios</a>
+                        <a href="afiliacion.html">Afiliación</a>
+                    </div>
+                </li>
+
+                <li class="dropdown-item">
+                    <a href="#">CONVENIOS</a>
+                    <div class="dropdown-menu">
+                        <a href="beneficios.html">Beneficios</a>
+                        <a href="convenios.html">Convenios</a>
+                    </div>
+                </li>
+
+                <li class="dropdown-item">
+                    <a href="#">CAPACITACIONES</a>
+                    <div class="dropdown-menu">
+                        <a href="cursos.html">Cursos</a>
+                        <a href="certificaciones.html">Certificaciones</a>
+                        <a href="eventos.html">Eventos</a>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+
+    <!-- ===== HERO ===== -->
+    <section class="beneficios-hero">
+        <div class="hero-content" data-aos="fade-up">
+            <h1 class="hero-title">BENEFICIOS</h1>
+            <p class="hero-subtitle">Diseñados para impulsar tu negocio en la industria del concreto</p>
+            <a href="#beneficios-detalle" class="hero-btn">DESCUBRE LOS PLANES</a>
+        </div>
+    </section>
+
+    <!-- ===== INTRO ===== -->
+    <section class="intro-section">
+        <div class="intro-container" data-aos="fade-up">
+            <h2 class="intro-title">¿QUÉ <span>BENEFICIOS</span> OBTIENES?</h2>
+            <p class="intro-text">
+                En <b>AMCI</b> creemos en el <b>crecimiento conjunto</b>.
+                Por eso hemos diseñado paquetes de <b>beneficios exclusivos</b>
+                tanto para <b>productores de concreto</b> como para
+                <b>proveedores</b>.
+                Cada nivel está pensado para ofrecerte exactamente lo que necesitas
+                para <b>destacar en el mercado</b>.
+            </p>
+        </div>
+    </section>
+
+    <!-- ===== SECCIÓN DE PESTAÑAS (CONCRETERO / PROVEEDOR) ===== -->
+    <section class="tabs-section" id="beneficios-detalle">
+        <div class="tabs-container">
+            <div class="tabs-header" style="padding-top: 4rem;">
+                <button class="tab-button active" id="tabConcreteroBtn">SOCIOS CONCRETEROS</button>
+                <button class="tab-button" id="tabProveedorBtn">SOCIOS PROVEEDORES</button>
+            </div>
+
+            <!-- Pestaña: Socio Concretero -->
+            <div class="tab-pane active" id="tabConcretero">
+                <div class="cards-grid">
+                    <!-- Tarjeta Premium -->
+                    <div class="benefit-card" data-aos="fade-up" style="border:0.2rem solid blue;">
+                        <div class="card-header">
+                            <div class="card-icon">
+                                <i class="fas fa-crown"></i>
+                            </div>
+                            <h3 class="card-title">PREMIUM</h3>
+                            <p class="card-subtitle">Para líderes del sector</p>
+                        </div>
+                        <div class="card-body">
+                            <ul class="feature-list">
+                                <li class="feature-item"><i class="fas fa-check-circle"></i> <span>Representación y
+                                        defensa ante autoridades</span></li>
+                                <li class="feature-item"><i class="fas fa-check-circle"></i> <span>Ficha de contacto en
+                                        sitio web AMCI (12 meses)</span></li>
+                                <li class="feature-item highlight"><i class="fas fa-star"></i> <span>Inscripción
+                                        gratuita a curso AMCI (hasta $5,000)</span></li>
+                                <li class="feature-item highlight"><i class="fas fa-star"></i> <span>20% de descuento en
+                                        cursos y certificaciones IMCYC</span></li>
+                                <li class="feature-item"><i class="fas fa-check-circle"></i> <span>Plataforma de
+                                        compra-venta de maquinaria</span></li>
+                                <li class="feature-item"><i class="fas fa-check-circle"></i> <span>Acceso a juntas
+                                        regionales y congresos</span></li>
+                                <li class="feature-item"><i class="fas fa-check-circle"></i> <span>10% de descuento en
+                                        refacciones MTM y productos A/P Safety</span></li>
+                            </ul>
+                        </div>
+                        <div class="card-footer">
+                            <a href="afiliacion.html#formulario" class="btn-card"
+                                style="display: inline-block; padding: 12px 30px; background: var(--primary-light); color: white; border-radius: 60px; text-decoration: none; font-weight: 600;">LO
+                                QUIERO</a>
+                        </div>
+                    </div>
+
+                    <!-- Tarjeta Básica -->
+                    <div class="benefit-card" data-aos="fade-up" data-aos-delay="100">
+                        <div class="card-header">
+                            <div class="card-icon">
+                                <i class="fas fa-helmet-safety"></i>
+                            </div>
+                            <h3 class="card-title">BÁSICA</h3>
+                            <p class="card-subtitle">El primer paso para crecer</p>
+                        </div>
+                        <div class="card-body">
+                            <ul class="feature-list">
+                                <li class="feature-item"><i class="fas fa-check-circle"></i> <span>Representación y
+                                        defensa ante autoridades</span></li>
+                                <li class="feature-item"><i class="fas fa-check-circle"></i> <span>Ficha de contacto en
+                                        sitio web AMCI (12 meses)</span></li>
+                                <li class="feature-item"><i class="fas fa-check-circle"></i> <span>Inscripción gratuita
+                                        a curso AMCI (hasta $5,000)</span></li>
+                                <li class="feature-item"><i class="fas fa-check-circle"></i> <span>Precios
+                                        preferenciales en eventos regionales</span></li>
+                                <li class="feature-item"><i class="fas fa-check-circle"></i> <span>Plataforma de
+                                        compra-venta de maquinaria</span></li>
+                                <li class="feature-item"><i class="fas fa-check-circle"></i> <span>Acceso a juntas
+                                        regionales y congresos</span></li>
+                                <li class="feature-item"><i class="fas fa-check-circle"></i> <span>Descuentos en sellos
+                                        de calidad</span></li>
+                            </ul>
+                        </div>
+                        <div class="card-footer">
+                            <a href="afiliacion.html#formulario" class="btn-card"
+                                style="display: inline-block; padding: 12px 30px; background: var(--primary-light); color: white; border-radius: 60px; text-decoration: none; font-weight: 600;">LO
+                                QUIERO</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Nota adicional de que hay más beneficios -->
+                <p style="text-align: center; margin-top: 30px; color: var(--gray-600);">*Todos los planes incluyen
+                    beneficios como descuentos en CONEXPO, World of Concrete, y más. <a href="convenios.html"
+                        style="color: var(--primary);">Ver convenios</a></p>
+            </div>
+
+            <!-- Pestaña: Socio Proveedor -->
+            <div class="tab-pane" id="tabProveedor">
+                <div class="cards-grid">
+                    <!-- Tarjeta Liderazgo -->
+                    <div class="benefit-card" data-aos="fade-up" style="border:0.2rem solid blue;">
+                        <div class="card-header">
+                            <div class="card-icon">
+                                <i class="fas fa-chart-line"></i>
+                            </div>
+                            <h3 class="card-title">LIDERAZGO</h3>
+                            <p class="card-subtitle">Máxima exposición</p>
+                        </div>
+                        <div class="card-body">
+                            <ul class="feature-list">
+                                <li class="feature-item highlight"><i class="fas fa-star"></i> <span>Difusión con +3,000
+                                        contactos</span></li>
+                                <li class="feature-item highlight"><i class="fas fa-star"></i> <span>Publicación en
+                                        revista México en Concreto (plana completa / 12 meses)</span></li>
+                                <li class="feature-item"><i class="fas fa-check-circle"></i> <span>Banner en página web
+                                        AMCI (12 meses)</span></li>
+                                <li class="feature-item"><i class="fas fa-check-circle"></i> <span>Ficha de contacto en
+                                        web (1 año)</span></li>
+                                <li class="feature-item highlight"><i class="fas fa-star"></i> <span>3 webinars en
+                                        colaboración al año</span></li>
+                                <li class="feature-item"><i class="fas fa-check-circle"></i> <span>Acceso a World of
+                                        Concrete Las Vegas</span></li>
+                            </ul>
+                        </div>
+                        <div class="card-footer">
+                            <a href="afiliacion.html#formulario" class="btn-card"
+                                style="display: inline-block; padding: 12px 30px; background: var(--primary-light); color: white; border-radius: 60px; text-decoration: none; font-weight: 600;">LO
+                                QUIERO</a>
+                        </div>
+                    </div>
+
+                    <!-- Tarjeta Estratégica -->
+                    <div class="benefit-card" data-aos="fade-up" data-aos-delay="100">
+                        <div class="card-header">
+                            <div class="card-icon">
+                                <i class="fas fa-handshake"></i>
+                            </div>
+                            <h3 class="card-title">ESTRATÉGICA</h3>
+                            <p class="card-subtitle">Equilibrio y visibilidad</p>
+                        </div>
+                        <div class="card-body">
+                            <ul class="feature-list">
+                                <li class="feature-item"><i class="fas fa-check-circle"></i> <span>Difusión con +3,000
+                                        contactos</span></li>
+                                <li class="feature-item highlight"><i class="fas fa-star"></i> <span>Publicación en
+                                        revista (media plana / 12 meses)</span></li>
+                                <li class="feature-item"><i class="fas fa-check-circle"></i> <span>Banner en página web
+                                        AMCI (12 meses)</span></li>
+                                <li class="feature-item"><i class="fas fa-check-circle"></i> <span>Ficha de contacto en
+                                        web (1 año)</span></li>
+                                <li class="feature-item"><i class="fas fa-check-circle"></i> <span>2 webinars en
+                                        colaboración al año</span></li>
+                                <li class="feature-item"><i class="fas fa-check-circle"></i> <span>Acceso a World of
+                                        Concrete Las Vegas</span></li>
+                            </ul>
+                        </div>
+                        <div class="card-footer">
+                            <a href="afiliacion.html#formulario" class="btn-card"
+                                style="display: inline-block; padding: 12px 30px; background: var(--primary-light); color: white; border-radius: 60px; text-decoration: none; font-weight: 600;">LO
+                                QUIERO</a>
+                        </div>
+                    </div>
+
+                    <!-- Tarjeta Esencial -->
+                    <div class="benefit-card" data-aos="fade-up" data-aos-delay="200">
+                        <div class="card-header">
+                            <div class="card-icon">
+                                <i class="fas fa-seedling"></i>
+                            </div>
+                            <h3 class="card-title">ESENCIAL</h3>
+                            <p class="card-subtitle">Inicio de alianza</p>
+                        </div>
+                        <div class="card-body">
+                            <ul class="feature-list">
+                                <li class="feature-item"><i class="fas fa-check-circle"></i> <span>Difusión con +3,000
+                                        contactos</span></li>
+                                <li class="feature-item"><i class="fas fa-check-circle"></i> <span>Publicación en
+                                        revista (media plana / 6 meses)</span></li>
+                                <li class="feature-item"><i class="fas fa-check-circle"></i> <span>Banner en página web
+                                        AMCI (6 meses)</span></li>
+                                <li class="feature-item"><i class="fas fa-check-circle"></i> <span>Ficha de contacto en
+                                        web (1 año)</span></li>
+                                <li class="feature-item"><i class="fas fa-check-circle"></i> <span>1 webinar en
+                                        colaboración al año</span></li>
+                                <li class="feature-item"><i class="fas fa-check-circle"></i> <span>Acceso a World of
+                                        Concrete Las Vegas</span></li>
+                            </ul>
+                        </div>
+                        <div class="card-footer">
+                            <a href="afiliacion.html#formulario" class="btn-card"
+                                style="display: inline-block; padding: 12px 30px; background: var(--primary-light); color: white; border-radius: 60px; text-decoration: none; font-weight: 600;">LO
+                                QUIERO</a>
+                        </div>
+                    </div>
+                </div>
+                <p style="text-align: center; margin-top: 20px; color: var(--gray-600);">*Todos los niveles incluyen
+                    difusión por correo, descuento en CONEXPO, y acceso a eventos internacionales.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== BANNER AFÍLIATE (reutilizado) ===== -->
+    <section class="afiliate-banner" id="afiliate">
+        <h2 data-aos="zoom-in">¡Afíliate en línea y obtén <span>10% de descuento</span>!</h2>
+        <p data-aos="zoom-in">Inicia tu proceso de afiliación hoy mismo y accede a todos estos beneficios con un
+            descuento exclusivo por registro en línea.</p>
+        <a href="afiliacion.html#formulario" class="btn btn-afiliate" data-aos="zoom-in">QUIERO LOS BENEFICIOS</a>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+
+            <!-- Columna 1 -->
+            <div class="footer-column footer-brand">
+                <img src="assets/img/logo/logoamci.png" alt="AMCI" class="footer-logo">
+
+                <p>
+                    Somos una Asociación Mexicana comprometida en promover la formalización de la industria concretera
+                    independiente
+                </p>
+
+                <div class="footer-social">
+                    <a href="https://www.facebook.com/mexicoenconcreto"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="https://www.instagram.com/amci.ac/"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://www.linkedin.com/company/asociaci%C3%B3n-mexicana-de-concreteros-independientes/"><i
+                            class="fa-brands fa-linkedin-in"></i></a>
+                    <a href="https://wa.me/5218118044452"><i class="fa-brands fa-whatsapp"></i></a>
+                </div>
+            </div>
+
+            <!-- Columna 2 -->
+            <div class="footer-column">
+                <h3>Navegación</h3>
+                <ul class="footer-links">
+                    <li><i class="fa-solid fa-angle-right"></i><a href="index.html">Inicio</a></li>
+                    <li><i class="fa-solid fa-angle-right"></i><a href="nosotros.html">AMCI</a></li>
+                    <li><i class="fa-solid fa-angle-right"></i><a href="socios.html">Miembros</a></li>
+                    <li><i class="fa-solid fa-angle-right"></i><a href="convenios.html">Convenios</a></li>
+                    <li><i class="fa-solid fa-angle-right"></i><a href="cusos.html">Capacitación</a></li>
+                    <li><i class="fa-solid fa-angle-right"></i><a href="#blog">Blog</a></li>
+                    <li><i class="fa-solid fa-angle-right"></i><a href="contacto.html">Contacto</a></li>
+                </ul>
+            </div>
+
+            <!-- Columna 3 -->
+            <div class="footer-column">
+                <h3>Contacto</h3>
+
+                <div class="footer-contact">
+
+                    <ul>
+                        <li><i class="fa-solid fa-location-dot"></i>
+                            <p><a href="https://maps.app.goo.gl/HgTsrKyP8JxzeWnP8">David Alfaro Siqueiros 106 – Suite
+                                    1700 P.17
+                                    Valle Oriente, 66269 San Pedro Garza García, N.L.</a>
+                            </p>
+                        </li>
+                        <li><i class="fa-solid fa-phone"></i>
+                            <p>Oficina: 81 4739 5426<br>
+                                Socios y proveedores: 81 1804 4452<br>
+                                Rel. gubernamentales y eventos: 81 1804 1943</p>
+                        </li>
+                        <li><i class="fa-solid fa-clock"></i>
+                            <p>Lun – Vie: 08:00 AM – 5:00 PM</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+            <p>© 2026 AMCI. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- ===== BOTÓN VOLVER ARRIBA ===== -->
+    <a href="#" id="globalScrollToTop" class="scroll-to-top"><i class="fa-solid fa-chevron-up"></i></a>
+
+    <!-- ===== SCRIPTS ===== -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Inicializar AOS
+            if (typeof AOS !== 'undefined') {
+                AOS.init({ duration: 800, once: true });
+            }
+
+            // Lógica de las pestañas (Tabs)
+            const tabConcreteroBtn = document.getElementById('tabConcreteroBtn');
+            const tabProveedorBtn = document.getElementById('tabProveedorBtn');
+            const tabConcretero = document.getElementById('tabConcretero');
+            const tabProveedor = document.getElementById('tabProveedor');
+
+            tabConcreteroBtn.addEventListener('click', function () {
+                tabConcreteroBtn.classList.add('active');
+                tabProveedorBtn.classList.remove('active');
+                tabConcretero.classList.add('active');
+                tabProveedor.classList.remove('active');
+            });
+
+            tabProveedorBtn.addEventListener('click', function () {
+                tabProveedorBtn.classList.add('active');
+                tabConcreteroBtn.classList.remove('active');
+                tabProveedor.classList.add('active');
+                tabConcretero.classList.remove('active');
+            });
+
+            // FAQ (si decides agregarlo más adelante)
+        });
+    </script>
+</body>
+
+</html>

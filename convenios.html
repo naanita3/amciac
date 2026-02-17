@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Convenios AMCI - Beneficios Exclusivos para Socios</title>
+    <link rel="shortcut icon" href="assets/img/logo/favicon.png">
+
+    <!-- ICONS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- Fuente Poppins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <!-- Animate on Scroll -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- Swiper para carruseles -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <!-- CSS Global -->
+    <link rel="stylesheet" href="styles.css">
+    <!-- CSS Específico para Convenios -->
+    <link rel="stylesheet" href="css/convenios.css">
+</head>
+
+<body>
+
+    <div id="page-loader">
+        <div class="loader-content">
+            <img src="assets/img/logo/logoamci.png" alt="AMCI">
+            <span>Cargando...</span>
+        </div>
+    </div>
+
+    <div id="cookie-banner">
+        <p>
+            Utilizamos cookies para mejorar tu experiencia.
+            <a href="#">Ver política</a>
+        </p>
+        <button id="accept-cookies">Aceptar</button>
+    </div>
+
+    <header>
+        <div class="logo">
+            <img src="assets/img/logo/logoamci.png" alt="AMCI">
+        </div>
+
+        <div class="menu-toggle" id="menuToggle">☰</div>
+
+        <nav id="mainNav" class="indexnav">
+            <div class="close-menu" id="closeMenu">×</div>
+
+            <ul>
+                <li><a href="#inicio">INICIO</a></li>
+
+                <li class="dropdown-item">
+                    <a href="#">AMCI</a>
+                    <div class="dropdown-menu">
+                        <a href="nosotros.html">Sobre Nosotros</a>
+                        <a href="mesa-directiva.html">Mesa Directiva</a>
+                        <a href="eventos.html">Eventos</a>
+                        <a href="amci-store.html">AMCISTORE</a>
+                    </div>
+                </li>
+
+                <li class="dropdown-item">
+                    <a href="#">MIEMBROS</a>
+                    <div class="dropdown-menu">
+                        <a href="proveedores.html">
+                            <p>Padrón de Proveedores</p>
+                        </a>
+                        <a href="socios.html">Socios</a>
+                        <a href="afiliacion.html">Afiliación</a>
+                    </div>
+                </li>
+
+                <li class="dropdown-item">
+                    <a href="#">CONVENIOS</a>
+                    <div class="dropdown-menu">
+                        <a href="beneficios.html">Beneficios</a>
+                        <a href="convenios.html">Convenios</a>
+                    </div>
+                </li>
+
+                <li class="dropdown-item">
+                    <a href="#">CAPACITACIONES</a>
+                    <div class="dropdown-menu">
+                        <a href="cursos.html">Cursos</a>
+                        <a href="certificaciones.html">Certificaciones</a>
+                        <a href="eventos.html">Eventos</a>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <!-- ===== HERO ===== -->
+    <section class="convenios-hero">
+        <div class="hero-content" data-aos="fade-up">
+            <h1 class="hero-title">CONVENIOS</h1>
+            <p class="hero-subtitle">Alianzas estratégicas que multiplican el valor de tu membresía AMCI</p>
+            <a href="#beneficios" class="hero-btn">DESCUBRIR BENEFICIOS</a>
+        </div>
+    </section>
+
+    <!-- ===== INTRO ===== -->
+    <section class="intro-section" id="beneficios">
+        <div class="intro-container" data-aos="fade-up">
+            <h2 class="intro-title">MÁS QUE UNA <span>ASOCIACIÓN</span></h2>
+            <p class="intro-text">
+                Hemos establecido alianzas con empresas líderes para ofrecerte ventajas competitivas reales.
+                Desde descuentos en insumos hasta condiciones preferenciales en servicios, cada convenio está
+                diseñado para fortalecer tu operación y reducir tus costos.
+            </p>
+        </div>
+    </section>
+
+    <!-- ===== BENEFICIOS DESTACADOS (TARJETAS GRANDES) ===== -->
+    <section class="destacados-section">
+        <div class="destacados-grid">
+
+            <!-- Pumping Team -->
+            <div class="destacado-card" data-aos="fade-right">
+                <div class="destacado-header">
+                    <div class="destacado-logo" style="background: #f7f7f7;">
+                        <img src="assets/img/logo/convenios/pumping.jpg" alt="MTM" style="height: 2.5rem; overflow: hidden;">
+                    </div>
+                    <div class="destacado-titulo">
+                        <h3>Pumping Team</h3>
+                        <p>Servicios de bombeo</p>
+                    </div>
+                </div>
+                <div class="destacado-body">
+                    <div class="beneficio-principal">
+                        <div class="descuento">Especial</div>
+                        <div class="beneficio-desc">Condiciones comerciales preferenciales para socios AMCI</div>
+                    </div>
+                    <div class="beneficio-secundario">
+                        <i class="fas fa-check-circle"></i>
+                        <span>Asesoría técnica especializada</span>
+                    </div>
+                    <div class="beneficio-secundario">
+                        <i class="fas fa-check-circle"></i>
+                        <span>Servicio prioritario</span>
+                    </div>
+                </div>
+                <div class="destacado-footer">
+                    <a href="#" class="btn-destacado">Solicitar cotización</a>
+                </div>
+            </div>
+
+            <!-- MTM Refacciones -->
+            <div class="destacado-card" data-aos="fade-left">
+                <div class="destacado-header">
+                    <div class="destacado-logo" style="background: #ffffff; ">
+                        <img src="assets/img/logo/proveedores/MTM_LOGO.jpg" alt="MTM" style="height: 2.5rem; overflow: hidden;">
+                    </div>
+                    <div class="destacado-titulo">
+                        <h3>MTM Refacciones</h3>
+                        <p>Partes para maquinaria</p>
+                    </div>
+                </div>
+                <div class="destacado-body">
+                    <div class="beneficio-principal">
+                        <div class="descuento">10% OFF</div>
+                        <div class="beneficio-desc">Descuento exclusivo en refacciones para concreteras</div>
+                    </div>
+                    <div class="beneficio-secundario">
+                        <i class="fas fa-check-circle"></i>
+                        <span>Amplio catálogo de partes</span>
+                    </div>
+                    <div class="beneficio-secundario">
+                        <i class="fas fa-check-circle"></i>
+                        <span>Envíos a todo México</span>
+                    </div>
+                </div>
+                <div class="destacado-footer">
+                    <a href="#" class="btn-destacado">Solicitar cotización</a>
+                </div>
+            </div>
+
+            <!-- A/P Safety -->
+            <div class="destacado-card" data-aos="fade-right" data-aos-delay="100">
+                <div class="destacado-header">
+                    <div class="destacado-logo" style="background: #fff3e0;">
+                        <i class="fas fa-hard-hat" style="color: #e65100; font-size: 2.5rem;"></i>
+                    </div>
+                    <div class="destacado-titulo">
+                        <h3>A/P Safety</h3>
+                        <p>Seguridad industrial</p>
+                    </div>
+                </div>
+                <div class="destacado-body">
+                    <div class="beneficio-principal">
+                        <div class="descuento">10% - 15% OFF</div>
+                        <div class="beneficio-desc">Descuento en productos certificados de seguridad</div>
+                    </div>
+                    <div class="beneficio-secundario">
+                        <i class="fas fa-check-circle"></i>
+                        <span>Equipo de protección personal</span>
+                    </div>
+                    <div class="beneficio-secundario">
+                        <i class="fas fa-check-circle"></i>
+                        <span>Señalización industrial</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- AMCI Preferente (Viajes) -->
+            <div class="destacado-card" data-aos="fade-left" data-aos-delay="100">
+                <div class="destacado-header">
+                    <div class="destacado-logo" style="background: #e3f2fd;">
+                        <i class="fas fa-plane" style="color: #0d47a1; font-size: 2.5rem;"></i>
+                    </div>
+                    <div class="destacado-titulo">
+                        <h3>AMCI Preferente</h3>
+                        <p>Viajes y hospedaje</p>
+                    </div>
+                </div>
+                <div class="destacado-body">
+                    <div class="beneficio-principal">
+                        <div class="descuento">Tarifas preferenciales</div>
+                        <div class="beneficio-desc">En vuelos, hoteles y restaurantes</div>
+                    </div>
+                    <div class="beneficio-secundario">
+                        <i class="fas fa-check-circle"></i>
+                        <span>Descuentos habitaciones en eventos</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== TABLA DE BENEFICIOS ADICIONALES ===== -->
+    <section class="tabla-section">
+        <div class="tabla-container">
+            <h2 class="tabla-titulo" data-aos="fade-up">OTROS <span>BENEFICIOS</span></h2>
+
+            <div class="tabla-beneficios" data-aos="fade-up" data-aos-delay="100">
+                <div class="tabla-row tabla-header">
+                    <div class="tabla-item" style="color: #e3f2fd;">Beneficio</div>
+                    <div class="tabla-item" style="color: #e3f2fd;">Descripción</div>
+                    <div class="tabla-item" style="color: #e3f2fd;">Tipo</div>
+                </div>
+
+                <div class="tabla-row">
+                    <div class="tabla-item" data-label="Beneficio">
+                        <i class="fas fa-certificate"></i>
+                        <strong>Sellos de Calidad</strong>
+                    </div>
+                    <div class="tabla-item" data-label="Descripción">
+                        10% de descuento en sellos para ollas, laboratorios y plantas
+                    </div>
+                    <div class="tabla-item" data-label="Tipo">
+                        <span class="badge-dcto">10% OFF</span>
+                    </div>
+                </div>
+
+                <div class="tabla-row">
+                    <div class="tabla-item" data-label="Beneficio">
+                        <i class="fas fa-chalkboard-teacher"></i>
+                        <strong>Capacitaciones DC-3</strong>
+                    </div>
+                    <div class="tabla-item" data-label="Descripción">
+                        Capacitaciones gratuitas en seguridad industrial (según programación)
+                    </div>
+                    <div class="tabla-item" data-label="Tipo">
+                        <span class="badge-gratis">GRATUITO</span>
+                    </div>
+                </div>
+
+                <div class="tabla-row">
+                    <div class="tabla-item" data-label="Beneficio">
+                        <a href="https://www.worldofconcrete.com/en/home.html"><img src="assets/img/logo/convenios/worldofconcret.webp" alt="WOC" style="height: 5rem;"></a>
+                    </div>
+                    <div class="tabla-item" data-label="Descripción">
+                        Acceso gratuito al piso de exhibición como visitante
+                    </div>
+                    <div class="tabla-item" data-label="Tipo">
+                        <span class="badge-gratis">GRATUITO</span>
+                    </div>
+                </div>
+
+                <div class="tabla-row">
+                    <div class="tabla-item" data-label="Beneficio">
+                        <a href="https://www.conexpoconagg.com/"><img src="assets/img/logo/convenios/conexpo.webp" alt="WOC" style="height: 5rem;"></a>
+                    </div>
+                    <div class="tabla-item" data-label="Descripción">
+                        Descuento en entrada (no aplicable a expositores)
+                    </div>
+                    <div class="tabla-item" data-label="Tipo">
+                        <span class="badge-dcto">DESCUENTO</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== CÓMO ACCEDER ===== -->
+    <section class="acceso-section">
+        <div class="acceso-container">
+            <h2 class="acceso-title" data-aos="fade-up">¿CÓMO <span>ACCEDER</span>?</h2>
+            <div class="acceso-steps">
+                <div class="acceso-step" data-aos="fade-up" data-aos-delay="100">
+                    <div class="step-number">1</div>
+                    <h3>Afíliate</h3>
+                    <p>Conviértete en Socio AMCI y obtén acceso inmediato a todos los convenios.</p>
+                </div>
+                <div class="acceso-step" data-aos="fade-up" data-aos-delay="200">
+                    <div class="step-number">2</div>
+                    <h3>Identifícate</h3>
+                    <p>Te proporcionaremos credenciales y códigos exclusivos para cada convenio.</p>
+                </div>
+                <div class="acceso-step" data-aos="fade-up" data-aos-delay="300">
+                    <div class="step-number">3</div>
+                    <h3>Disfruta</h3>
+                    <p>Presenta tu identificación AMCI y obtén descuentos exclusivos.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== BANNER AFÍLIATE ===== -->
+    <section class="afiliate-banner">
+        <h2 data-aos="zoom-in">¿AÚN NO ERES SOCIO?</h2>
+        <p data-aos="zoom-in">Afíliate hoy y comienza a disfrutar de todos estos beneficios exclusivos</p>
+        <a href="afiliacion.html#formulario" class="btn-afiliate" data-aos="zoom-in">QUIERO AFILIARME</a>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+
+            <!-- Columna 1 -->
+            <div class="footer-column footer-brand">
+                <img src="assets/img/logo/logoamci.png" alt="AMCI" class="footer-logo">
+
+                <p>
+                    Somos una Asociación Mexicana comprometida en promover la formalización de la industria concretera
+                    independiente
+                </p>
+
+                <div class="footer-social">
+                    <a href="https://www.facebook.com/mexicoenconcreto"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="https://www.instagram.com/amci.ac/"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://www.linkedin.com/company/asociaci%C3%B3n-mexicana-de-concreteros-independientes/"><i
+                            class="fa-brands fa-linkedin-in"></i></a>
+                    <a href="https://wa.me/5218118044452"><i class="fa-brands fa-whatsapp"></i></a>
+                </div>
+            </div>
+
+            <!-- Columna 2 -->
+            <div class="footer-column">
+                <h3>Navegación</h3>
+                <ul class="footer-links">
+                    <li><i class="fa-solid fa-angle-right"></i><a href="index.html">Inicio</a></li>
+                    <li><i class="fa-solid fa-angle-right"></i><a href="nosotros.html">AMCI</a></li>
+                    <li><i class="fa-solid fa-angle-right"></i><a href="socios.html">Miembros</a></li>
+                    <li><i class="fa-solid fa-angle-right"></i><a href="convenios.html">Convenios</a></li>
+                    <li><i class="fa-solid fa-angle-right"></i><a href="cusos.html">Capacitación</a></li>
+                    <li><i class="fa-solid fa-angle-right"></i><a href="#blog">Blog</a></li>
+                    <li><i class="fa-solid fa-angle-right"></i><a href="contacto.html">Contacto</a></li>
+                </ul>
+            </div>
+
+            <!-- Columna 3 -->
+            <div class="footer-column">
+                <h3>Contacto</h3>
+
+                <div class="footer-contact">
+
+                    <ul>
+                        <li><i class="fa-solid fa-location-dot"></i>
+                            <p><a href="https://maps.app.goo.gl/HgTsrKyP8JxzeWnP8">David Alfaro Siqueiros 106 – Suite
+                                    1700 P.17
+                                    Valle Oriente, 66269 San Pedro Garza García, N.L.</a>
+                            </p>
+                        </li>
+                        <li><i class="fa-solid fa-phone"></i>
+                            <p>Oficina: 81 4739 5426<br>
+                                Socios y proveedores: 81 1804 4452<br>
+                                Rel. gubernamentales y eventos: 81 1804 1943</p>
+                        </li>
+                        <li><i class="fa-solid fa-clock"></i>
+                            <p>Lun – Vie: 08:00 AM – 5:00 PM</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+            <p>© 2026 AMCI. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- Botón volver arriba -->
+    <a href="#" id="globalScrollToTop" class="scroll-to-top"><i class="fa-solid fa-chevron-up"></i></a>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
